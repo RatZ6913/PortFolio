@@ -42,6 +42,26 @@ nav ul a {
   font-size: large;
 }
 
+nav ul li a:hover {
+  color: var(--color-blue-dark);
+}
+
+nav ul a::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  background-color: var(--color-light);
+}
+
+nav ul a:hover::before {
+  display: flex;
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: var(--color-light);
+  transition: 0.8s;
+}
+
 nav ul li:nth-child(4) {
   background-color: var(--color-grey-light);
 }
@@ -165,6 +185,11 @@ h2 {
   justify-content: space-evenly;
   align-items: center;
   background-color: #88979e81;
+}
+
+#right-content img:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
 }
 
 
