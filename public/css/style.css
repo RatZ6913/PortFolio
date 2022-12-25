@@ -42,6 +42,14 @@ nav ul a {
   font-size: large;
 }
 
+nav ul li:nth-child(4) {
+  background-color: var(--color-grey-light);
+}
+
+nav ul li:nth-child(4) a {
+  color: var(--color-light);
+}
+
 /* Top Page */
 section {
   width: 100%;
@@ -306,5 +314,6 @@ footer div {
 footer div a {
   display: flex;
   margin: auto 0.3rem;
+  color: var(--color-blue-dark);
 }
 
