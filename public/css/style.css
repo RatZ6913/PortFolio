@@ -113,7 +113,7 @@ h2 {
   margin-top: 12vh;
   height: 75vh;
   transition: 2s;
-  background-image: url(/public/img/bg-img1.jpg);
+  background-image: url(../img/bg-img1.jpg);
   background-size: cover; 
   background-position: center;
 }
@@ -172,7 +172,7 @@ h2 {
   background-color: #eeeeee90;
   transition: 2s;
   background-color: var(--color-orange);
-  background-image: url(./public/img/bg-image5.jpg);
+  background-image: url(../img/bg-image5.jpg);
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center;
@@ -236,7 +236,7 @@ h2 {
   margin-top: 12vh;
   height: 75vh;
   transition: 2s;
-  background-image: url(./public/img/bg-img5.jpg);
+  background-image: url(../img/bg-img5.jpg);
   background-size: cover; 
   background-position: center;
 }
