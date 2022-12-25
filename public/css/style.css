@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;600&family=Secular+One&display=swap');
+
+:root {
+  --color-grey-light : #88979e;
+  --color-blue-dark : #3b557c;
+  --color-orange : #d4a04d;
+  --color-light : #eeeeee;
+  --color-dark : #231c24;
+  --font-family-title : 'Secular One', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color: var(--color-light);
+}
+
+main {
+  display: flex;
+}
+
+/* Navside Bar  */
+nav {
+  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 10%;
+  padding: 0;
+  margin: 0;
+  height: 95vh;
+  background-color: var(--color-grey-light);
+  text-align: center;
+  transition: 1s;  
+}
+
+nav ul a {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-size: large;
+}
+
+/* Top Page */
+section {
+  width: 100%;
+  height: 95vh;
+  background-color: var(--color-light);
+  /* background-image: url(/public/img/bg-img2.jpg); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header {
+  display: flex;
+  width: 90%; /**/
+  margin: auto;
+  height: 8vh;
+  justify-content: flex-start;
+  background-color: var(--color-grey-light);
+  /* box-shadow: 1px 1px 1pc var(--color-blue-dark); */
+}
+
+header figure {
+  margin: auto;
+  width: 0;
+}
+
+header figure img {
+  width: 150px;
+  margin-left: 5rem;
+  margin-top: 3rem;
+  animation: 10s infinite logo;
+}
+
+@keyframes logo {
+  from {
+    transform: scale(0.95);
+    border-radius: 35px;
+  }
+  to {
+    transform: scale(1);
+    border-radius: 5px;
+  }
+}
+
+header div {
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  container-type: size;
+}
+
+h1 {
+  width: 100%;
+  color: var(--color-light);
+  text-transform: uppercase;
+  margin-bottom: 3.5rem;
+  margin-top: -1rem;
+  font-weight: 700;
+}
+
+h2 {
+  color: var(--color-light);
+  font-weight: 600;
+}
+
+#name {
+  font-size: 1.5rem;
+  color: var(--color-blue-dark);
+  text-align: center;
+  margin: auto;
+  font-weight: 700;
+}
+
+/* DIFFÉRENTS CONTAINER  */
+#boxAbout {
+  /* display: none; */
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 12vh;
+  height: 75vh;
+  background-color: #eeeeee90;
+  transition: 2s;
+  /* box-shadow: 1px 1px 1pc var(--color-blue-dark); */
+  background-color: var(--color-light);
+  background-image: url(/public/img/bg-img2.jpg);
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 35%;
+  text-align: center;
+  background-color: var(--color-light);
+  height: 50%;
+  margin: auto 0;
+  box-shadow: 1px 1px 1pc var(--color-blue-dark);
+}
+
+#left-content div {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--color-grey-light);
+  color: var(--color-dark);
+}
+
+#left-content p {
+  width: 80%;
+  margin: 0 auto; 
+}
+
+#second-text {
+  background-color: var(--color-orange);
+  padding: 1rem;
+  color: var(--color-light);
+}
+
+.span-second-text {
+  color: var(--color-blue-dark);
+  font-weight: 600;
+}
+
+#right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20%;
+  background-color: var(--color-grey-light);
+  text-align: center;
+  height: 80%;
+  margin: auto 0;
+  box-shadow: 1px 1px 1pc var(--color-blue-dark);
+}
+
+#right-content img {
+  display: flex;
+  width: 5rem;
+}
+
+#boxProject {
+  display: none;
+  margin-top: 15vh;
+  width: 100%;
+  height: 71.6vh;
+  background-color: blue;
+  transition: 2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  background-color: var(--color-dark);
+  width: 100%;
+  color: var(--color-light);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 1.2rem;
+}
+
+
+
+
+
+
