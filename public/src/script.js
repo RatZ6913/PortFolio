@@ -37,15 +37,16 @@ spanWords.forEach((element, index) => {
             element.textContent = textWriter;
           } else {
             i++;
-          }
-        }, 400)
+          };
+        }, 300)
 
-      }, 5000);
+      }, 4500);
 
     } else {
       i++;
-    }
-  }, 200);
+    };
+
+  }, 700);
 });
 
 

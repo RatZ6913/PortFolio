@@ -180,7 +180,7 @@ h2 {
 /*________________________ MENU : À PROPOS ________________________*/
 #about {
   display: none;
-  display: flex;
+  /* display: flex; */
   width: 90%;
   justify-content: space-around;
   margin: auto;
@@ -241,8 +241,9 @@ h2 {
 
 /*_____________ 2 ÈME BOÎTE : MENU : PROJETS ________________________*/
 /* A MODIFIER  */
-/* #project {
+#project {
   display: flex;
+  /* display: none; */
   width: 90%;
   justify-content: space-around;
   margin: auto;
@@ -301,7 +302,7 @@ h2 {
 #box-project img:hover {
   transform: scale(2.5);
   border: 1px solid var(--color-light);
-} */
+}
 
 
 /* <!--___________________3 ÈME BOÎTE : MENU  : CONTACT ________________________ -->  */
@@ -354,13 +355,6 @@ h2 {
   color: var(--color-light);
   margin-left: 0.5rem;
 }
-
-
-
-
-
-
-
 
 footer {
   display: flex;
