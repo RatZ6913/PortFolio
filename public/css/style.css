@@ -27,13 +27,35 @@ main {
 /* Navside Bar  */
 nav {
   display: none;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   width: 10%;
   background-color: var(--color-dark);
   text-align: center;
-  transition: 2s;  
+}
+
+.btn-menu {
+  display: flex;
+  animation: navbar 2s ease;
+}
+
+@keyframes navbar {
+  from {
+    translate: -50%;
+    opacity: 0%;
+  }
+  to {
+    translate: 0%;
+  }
+}
+
+#menu  {
+  background-color: var(--color-light);
+  border-radius: 3px;
+  position: absolute;
+  top: 50px;
+  left: 25px;
+  cursor: pointer;
 }
 
 nav ul a {
@@ -114,8 +136,32 @@ header div {
 h1 {
   color: var(--color-light);
   text-transform: uppercase;
+  margin: auto;
   margin-bottom: 3.5rem;
   margin-top: -1rem;
+  overflow: hidden;
+  animation: title 15s steps(150) 5s infinite;
+  height: 3vh;
+  letter-spacing: 0.2rem;
+  white-space: nowrap;
+  transition: 1s;
+}
+
+@keyframes title {
+  0% {
+    width: 0%;
+  }
+  40% {
+    text-decoration: underline;
+    color: var(--color-orange);
+  }
+  80% {
+    text-decoration: none;
+    color: var(--color-light);
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 h2 {
