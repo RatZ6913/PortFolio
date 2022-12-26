@@ -179,7 +179,7 @@ h2 {
 /*________________________ MENU : À PROPOS ________________________*/
 #about {
   display: none;
-  /* display: flex; */
+  display: flex;
   width: 90%;
   justify-content: space-around;
   margin: auto;
@@ -242,7 +242,7 @@ h2 {
 /* A MODIFIER  */
 #project {
   display: flex;
-  /* display: none; */
+  display: none;
   width: 90%;
   flex-wrap: wrap;
   margin: auto;
