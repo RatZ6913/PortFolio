@@ -296,27 +296,24 @@ h2 {
 }
 
 .content-project {
-  display: flex;
+  /* display: flex; */
+  display: none;
   height: 100%;
+  margin-top: 0.5rem;
 }
 
 #content-project1 {
-  /* display: flex; */
+  display: flex;
   /* display: none; */
   flex-direction: column;
   align-items: center;
 }
 
 #content-project2, #content-project3, #content-project4, #content-project5, #content-project6  {
-  display: none;
   /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-}
-
-.name-project {
-  color: var(--color-dark);
-  font-weight: 700;
+  /* display: none; */
+  flex-direction: column;
+  align-items: center;
 }
 
 .img-project {
@@ -342,6 +339,15 @@ h2 {
 .text-project {
   width: 80%;
   text-align: center;
+  background-color: var(--color-light);
+  color: var(--color-blue-dark);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.subject {
+  color: var(--color-orange);
+  text-decoration: underline;
 }
 
 /* <!--___________________3 ÈME BOÎTE : MENU  : CONTACT ________________________ -->  */
