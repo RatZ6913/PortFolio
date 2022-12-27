@@ -303,7 +303,7 @@ h2 {
 }
 
 /*_ _ _ _ _ _ BOITE DES DIFFERENTS PROJECTS _ _ _ _ _ _*/
-#content-project1 {
+#content-project6 {
   display: flex;
   /* display: none; */
   flex-direction: column;
@@ -324,8 +324,7 @@ h2 {
 
 .img-project:hover {
   cursor: pointer;
-  filter: drop-shadow(8px 10px 7px var(--color-dark)) blur(0px) brightness(100%);
-  transform: scale(1.5);
+  transform: scale(1.4);
 }
 
 .btn-arrow {
