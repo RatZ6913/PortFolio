@@ -302,6 +302,7 @@ h2 {
   margin-top: 0.5rem;
 }
 
+/*_ _ _ _ _ _ BOITE DES DIFFERENTS PROJECTS _ _ _ _ _ _*/
 #content-project1 {
   display: flex;
   /* display: none; */
@@ -318,6 +319,13 @@ h2 {
 
 .img-project {
   width: 80%;
+  transition: 0.5s;
+}
+
+.img-project:hover {
+  cursor: pointer;
+  filter: drop-shadow(8px 10px 7px var(--color-dark)) blur(0px) brightness(100%);
+  transform: scale(1.5);
 }
 
 .btn-arrow {
