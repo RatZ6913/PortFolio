@@ -40,13 +40,8 @@ nav {
 }
 
 @keyframes navbar {
-  from {
-    translate: -50%;
-    opacity: 0%;
-  }
-  to {
-    translate: 0%;
-  }
+  from { translate: -50%; opacity: 0%; }
+  to { translate: 0%; }
 }
 
 #menu {
@@ -115,14 +110,8 @@ header figure img {
 }
 
 @keyframes logo {
-  from {
-    transform: scale(0.95);
-    border-radius: 35px;
-  }
-  to {
-    transform: scale(1);
-    border-radius: 5px;
-  }
+  from { transform: scale(0.95); border-radius: 35px; }
+  to { transform: scale(1); border-radius: 5px; }
 }
 
 header div {
@@ -147,20 +136,10 @@ h1 {
 }
 
 @keyframes title {
-  0% {
-    width: 0%;
-  }
-  40% {
-    text-decoration: underline;
-    color: var(--color-orange);
-  }
-  80% {
-    text-decoration: none;
-    color: var(--color-light);
-  }
-  100% {
-    width: 100%;
-  }
+  0% { width: 0%; }
+  40% { text-decoration: underline; color: var(--color-orange); }
+  80% { text-decoration: none; color: var(--color-light); }
+  100% { width: 100%; }
 }
 
 h2 {
@@ -316,22 +295,23 @@ h2 {
   100% { width: 55px; background-color: #d4a04db9; }
 }
 
-#content-project1 {
+.content-project {
   display: flex;
+  height: 100%;
+}
+
+#content-project1 {
+  /* display: flex; */
   /* display: none; */
   flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
   align-items: center;
 }
 
-#content-project2 {
-  display: flex;
+#content-project2, #content-project3, #content-project4, #content-project5, #content-project6  {
   display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
-  align-items: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
 }
 
 .name-project {
