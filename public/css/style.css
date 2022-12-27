@@ -350,6 +350,16 @@ h2 {
   text-decoration: underline;
 }
 
+.img-lang {
+  display: flex;
+  margin: auto;
+}
+
+.img-lang a {
+  place-self: center;
+  color: var(--color-blue-dark);
+}
+
 /* <!--___________________3 ÈME BOÎTE : MENU  : CONTACT ________________________ -->  */
 #contact {
   display: none;
