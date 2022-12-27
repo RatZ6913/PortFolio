@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;600&family=Secular+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;600&family=Secular+One&display=swap");
 
 :root {
-  --color-grey-light : #88979e;
-  --color-blue-dark : #3b557c;
-  --color-orange : #d4a04d;
-  --color-light : #eeeeee;
-  --color-dark : #231c24;
-  --font-family-title : 'Secular One', sans-serif;
+  --color-grey-light: #88979e;
+  --color-blue-dark: #3b557c;
+  --color-orange: #d4a04d;
+  --color-light: #eeeeee;
+  --color-dark: #231c24;
+  --font-family-title: "Secular One", sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   font-weight: 400;
 }
 
@@ -94,7 +94,7 @@ nav ul li:nth-child(4) a {
 /* Top Page */
 section {
   width: 100%;
-  background:linear-gradient(150deg, #231c2488 51%, #d4a04db7 51%);
+  background: linear-gradient(150deg, #231c2488 51%, #d4a04db7 51%);
 }
 
 header {
@@ -179,7 +179,7 @@ h2 {
 /*________________________ MENU : À PROPOS ________________________*/
 #about {
   display: none;
-  display: flex;
+  /* display: flex; */
   width: 90%;
   justify-content: space-around;
   margin: auto;
@@ -187,7 +187,7 @@ h2 {
   height: 75vh;
   transition: 2s;
   background-image: url(../img/bg-img1.jpg);
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
 }
 
@@ -209,7 +209,7 @@ h2 {
 
 #left-content p {
   width: 80%;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 #second-text {
@@ -237,12 +237,11 @@ h2 {
   transition: 0.5s;
 }
 
-
 /*_____________ 2 ÈME BOÎTE : MENU : PROJETS ________________________*/
 /* A MODIFIER  */
 #project {
   display: flex;
-  display: none;
+  /* display: none; */
   width: 90%;
   flex-wrap: wrap;
   margin: auto;
@@ -252,15 +251,8 @@ h2 {
   transition: 2s;
   background-color: var(--color-orange);
   background-image: url(../img/bg-image5.jpg);
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
-}
-
-#project h2 {
-  width: 100%;
-  background-color: var(--color-dark);
-  text-align: center;
-  padding-top: 2rem;
 }
 
 #box-project {
@@ -272,8 +264,70 @@ h2 {
   margin: auto;
 }
 
-#content-project {
+#link-project {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#link-project h2 {
+  width: 100%;
+  background-color: var(--color-dark);
+  text-align: center;
+  align-self: baseline;
+  padding: 1rem;
+}
+
+#link-project a {
+  text-decoration: none;
+  color: var(--color-orange);
+  background-color: var(--color-dark);
+  padding: 0.2rem;
+  margin: 0.2rem;
+  border-radius: 5px;
+}
+
+#link-project a::before {
+  content: "";
+  position: absolute;
+  height: 1.5rem;
+  width: 0px;
+  background-color: var(--color-orange);
+}
+
+#link-project a:hover {
+  color: var(--color-light);
+}
+
+#link-project a:hover::before {
+  /* content: ""; */
+  opacity: 50%;
+  position: absolute;
+  height: 1.5rem;
+  width: 50px;
+  animation: project 2s ease-in-out infinite;
+}
+
+@keyframes project {
+  0% { width: 0; }
+  50% { background-color: var(--color-light); }
+  100% { width: 55px; background-color: #d4a04db9; }
+}
+
+#content-project1 {
+  display: flex;
+  /* display: none; */
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+}
+
+#content-project2 {
+  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
@@ -297,7 +351,7 @@ h2 {
   border-radius: 10px;
 }
 
-.btn-arrow:nth-child(1){
+.btn-arrow:nth-child(1) {
   margin-right: 1rem;
 }
 
@@ -309,7 +363,6 @@ h2 {
   width: 80%;
   text-align: center;
 }
-
 
 /* <!--___________________3 ÈME BOÎTE : MENU  : CONTACT ________________________ -->  */
 #contact {
@@ -323,7 +376,7 @@ h2 {
   height: 75vh;
   transition: 2s;
   background-image: url(../img/bg-img5.jpg);
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
 }
 
@@ -350,7 +403,7 @@ h2 {
 #contact-info h3 {
   color: var(--color-orange);
   margin: auto;
-} 
+}
 
 #contact-info div {
   display: flex;
@@ -387,4 +440,3 @@ footer div a {
   margin: auto 0.3rem;
   color: var(--color-blue-dark);
 }
-
