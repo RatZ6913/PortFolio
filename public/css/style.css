@@ -16,10 +16,6 @@
   font-weight: 400;
 }
 
-body {
-  background-color: var(--color-light);
-}
-
 main {
   display: flex;
 }
@@ -303,7 +299,7 @@ h2 {
 }
 
 /*_ _ _ _ _ _ BOITE DES DIFFERENTS PROJECTS _ _ _ _ _ _*/
-#content-project6 {
+#content-project1 {
   display: flex;
   /* display: none; */
   flex-direction: column;
@@ -320,6 +316,7 @@ h2 {
 .img-project {
   width: 80%;
   transition: 0.5s;
+  min-height: 80%;
 }
 
 .img-project:hover {
