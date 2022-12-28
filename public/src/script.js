@@ -68,7 +68,6 @@ spanWords.forEach((element, index) => {
 });
 
 
-
 let about = document.querySelector('#about');
 let project = document.querySelector('#project');
 let contact = document.querySelector('#contact');
@@ -78,7 +77,7 @@ let linkProject = document.querySelector('#nav-project');
 let linkContact = document.querySelector('#nav-contact');
 
 
-linkAbout.addEventListener('click', (e) => {
+linkAbout.addEventListener('click', () => {
   about.style.display = "flex";
   project.style.display = "none";
   contact.style.display = "none";
@@ -101,15 +100,26 @@ linkContact.addEventListener('click', () => {
 
 
 
-for (let n = 1; n <= 6; n++) {
-  let boxProject = document.querySelectorAll('#content-project' + n);
-  let linkNumber = document.querySelectorAll('#link-number' + n)
+let arrLinkNumber = document.querySelectorAll([
+  "#link-number1",
+  "#link-number2",
+  "#link-number3",
+  "#link-number4",
+  "#link-number5",
+  "#link-number6"
+]);
 
-  
+let arrProjectNumber = document.querySelectorAll([
+  "#content-project1",
+  "#content-project2",
+  "#content-project3",
+  "#content-project4",
+  "#content-project5",
+  "#content-project6",
+]);
 
-};
+
+console.log(arrLinkNumber);
+console.log(arrProjectNumber);
 
 
-
-
- 
