@@ -56,7 +56,7 @@ spanWords.forEach((element, index) => {
           } else {
             i++;
           };
-        }, 200);
+        }, 300);
 
       }, 2500);
 
@@ -64,7 +64,7 @@ spanWords.forEach((element, index) => {
       i++;
     };
 
-  }, 200);
+  }, 300);
 });
 
 
