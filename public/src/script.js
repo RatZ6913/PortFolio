@@ -56,17 +56,13 @@ spanWords.forEach((element, index) => {
           } else {
             i++;
           };
-        }, 300);
-
-      }, 2500);
-
+        }, 400);
+      }, 3000);
     } else {
       i++;
     };
-
-  }, 300);
+  }, 400);
 });
-
 
 let about = document.querySelector('#about');
 let project = document.querySelector('#project');
@@ -75,7 +71,6 @@ let contact = document.querySelector('#contact');
 let linkAbout = document.querySelector('#nav-about');
 let linkProject = document.querySelector('#nav-project');
 let linkContact = document.querySelector('#nav-contact');
-
 
 linkAbout.addEventListener('click', () => {
   about.style.display = "flex";
@@ -96,10 +91,6 @@ linkContact.addEventListener('click', () => {
 });
 
 
-
-
-
-
 let arrLinkNumber = document.querySelectorAll([
   "#link-number1",
   "#link-number2",
@@ -117,7 +108,6 @@ let arrProjectNumber = document.querySelectorAll([
   "#content-project5",
   "#content-project6",
 ]);
-
 
 console.log(arrLinkNumber);
 console.log(arrProjectNumber);
