@@ -70,10 +70,10 @@ let linkAbout = document.querySelector('#link-about');
 let linkProject = document.querySelector('#link-project');
 let linkContact = document.querySelector('#link-contact');
 
-console.log(about, project, contact);
+// console.log(about, project, contact);
 
-linkAbout.addEventListener('click', () => {
+// linkAbout.addEventListener('click', () => {
 
-});
+// });
 
 

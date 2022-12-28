@@ -28,17 +28,21 @@ nav {
   width: 10%;
   background-color: var(--color-dark);
   text-align: center;
+  transition: 2s;
   animation: openNav 2s ease;
 }
 
+/* Animation : Ouverture Navbar */
 @keyframes openNav {
   from {
     translate: -50%;
     opacity: 0%;
-    transform: rotateY(270deg);
+    transform: rotateY(250deg);
+    width: 0%;
   }
   to {
     transform: rotateY(360deg);
+    width: 10%;
   }
 }
 
@@ -48,16 +52,16 @@ nav {
   animation: closeNav 2s ease;
 }
 
+/* Animation : Fermeture Navbar */
 @keyframes closeNav {
   from {
     transform: rotateY(360deg);
     width: 10%;
-    /* display: flex; */
   }
   to {
-    opacity: 0%;
-    width: 0;
-    display: none;
+    width: 0%;
+    translate: -50%;
+    transform: rotateY(250deg);
   }
 }
 
