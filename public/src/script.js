@@ -2,15 +2,14 @@ let nav = document.querySelector('nav');
 let menu = document.querySelector('#menu');
 let spanWords = document.querySelectorAll('.span-second-text');
 
-
 // Bouton : Menu Ouvrir/Fermer Navbar
 menu.addEventListener('click', () => {
   nav.classList.toggle('btn-menu');
 
   if (nav.classList.contains('btn-menu')) {
     setTimeout(() => {
-      nav.style.display = "none";
-    }, 2000);
+      nav.style.display = "none";      
+    }, 1800);
   } else {
     nav.style.display = "";
   }
@@ -22,6 +21,13 @@ let arrTypeWriter = [
   "FullStack",
   "Compétences",
   "Expérience"
+];
+
+let iconWeb = [
+  "./public/img/dev-web.png",
+  "./public/img/fullstack.png",
+  "./public/img/skills.png",
+  "./public/img/experience.png"
 ];
 
 // Text Writer : Pour les mots importants dans la partie Accueil
@@ -45,19 +51,20 @@ spanWords.forEach((element, index) => {
         setInterval(() => {
           element.textContent += textWriter[i];
           if (i === textWriter.length) {
-            element.textContent = textWriter;
+            element.innerHTML = textWriter + `<img src="${iconWeb[index]}" class="logo-languages">`;
+            clearInterval(setInterval(interval));
           } else {
             i++;
           };
-        }, 300);
+        }, 200);
 
-      }, 4500);
+      }, 2500);
 
     } else {
       i++;
     };
 
-  }, 700);
+  }, 200);
 });
 
 
@@ -66,14 +73,29 @@ let about = document.querySelector('#about');
 let project = document.querySelector('#project');
 let contact = document.querySelector('#contact');
 
-let linkAbout = document.querySelector('#link-about');
-let linkProject = document.querySelector('#link-project');
-let linkContact = document.querySelector('#link-contact');
+let linkAbout = document.querySelector('#nav-about');
+let linkProject = document.querySelector('#nav-project');
+let linkContact = document.querySelector('#nav-contact');
 
-// console.log(about, project, contact);
 
-// linkAbout.addEventListener('click', () => {
+linkAbout.addEventListener('click', (e) => {
+  about.style.display = "flex";
+  project.style.display = "none";
+  contact.style.display = "none";
+});
 
-// });
+linkProject.addEventListener('click', () => {
+  about.style.display = "none";
+  project.style.display = "flex";
+  contact.style.display = "none";
+});
+
+linkContact.addEventListener('click', () => {
+  about.style.display = "none";
+  project.style.display = "none";
+  contact.style.display = "flex";
+});
+
+
 
 

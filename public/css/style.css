@@ -47,8 +47,7 @@ nav {
 }
 
 .btn-menu {
-  animation: closenav 2s ease;
-  transition: 2s;
+  transition: 1.5s;
   animation: closeNav 2s ease;
 }
 
@@ -236,7 +235,7 @@ h2 {
   margin: auto;
   margin-top: 12vh;
   height: 75vh;
-  transition: 2s;
+  transition: 1s;
   background-image: url(../img/bg-img1.jpg);
   background-size: cover;
   background-position: center;
@@ -263,8 +262,15 @@ h2 {
   margin: 0 auto;
 }
 
+#left-content .logo-languages {
+  display: flex;
+  background-color: var(--color-light);
+  border-radius: 5px; 
+  margin: auto;
+}
+
 #second-text {
-  background-color: var(--color-orange);
+  background-color: #d4a04dc2;
   padding: 1rem;
   color: var(--color-light);
 }
@@ -408,8 +414,6 @@ h2 {
 #content-project4,
 #content-project5,
 #content-project6 {
-  /* display: flex; */
-  /* display: none; */
   flex-direction: column;
   align-items: center;
 }
@@ -478,7 +482,7 @@ h2 {
   margin: auto;
   margin-top: 12vh;
   height: 75vh;
-  transition: 2s;
+  transition: 1s;
   background-image: url(../img/bg-img5.jpg);
   background-size: cover;
   background-position: center;
