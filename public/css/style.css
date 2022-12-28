@@ -36,8 +36,13 @@ nav {
 }
 
 @keyframes navbar {
-  from { translate: -50%; opacity: 0%; }
-  to { translate: 0%; }
+  from {
+    translate: -50%;
+    opacity: 0%;
+  }
+  to {
+    translate: 0%;
+  }
 }
 
 #menu {
@@ -106,8 +111,14 @@ header figure img {
 }
 
 @keyframes logo {
-  from { transform: scale(0.95); border-radius: 35px; }
-  to { transform: scale(1); border-radius: 5px; }
+  from {
+    transform: scale(0.95);
+    border-radius: 35px;
+  }
+  to {
+    transform: scale(1);
+    border-radius: 5px;
+  }
 }
 
 header div {
@@ -132,10 +143,20 @@ h1 {
 }
 
 @keyframes title {
-  0% { width: 0%; }
-  40% { text-decoration: underline; color: var(--color-orange); }
-  80% { text-decoration: none; color: var(--color-light); }
-  100% { width: 100%; }
+  0% {
+    width: 0%;
+  }
+  40% {
+    text-decoration: underline;
+    color: var(--color-orange);
+  }
+  80% {
+    text-decoration: none;
+    color: var(--color-light);
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 h2 {
@@ -257,8 +278,8 @@ h2 {
 
 #link-project a {
   text-decoration: none;
-  color: var(--color-orange);
-  background-color: var(--color-dark);
+  color: var(--color-dark);
+  background-color: var(--color-orange);
   padding: 0.2rem;
   margin: 0.2rem;
   border-radius: 5px;
@@ -282,13 +303,20 @@ h2 {
   position: absolute;
   height: 1.5rem;
   width: 50px;
-  animation: project 2s ease-in-out infinite;
+  animation: project 1s ease-in-out infinite;
 }
 
 @keyframes project {
-  0% { width: 0; }
-  50% { background-color: var(--color-light); }
-  100% { width: 55px; background-color: #d4a04db9; }
+  0% {
+    width: 0;
+  }
+  50% {
+    background-color: var(--color-light);
+  }
+  100% {
+    width: 55px;
+    background-color: #d4a04db9;
+  }
 }
 
 .content-project {
@@ -306,7 +334,11 @@ h2 {
   align-items: center;
 }
 
-#content-project2, #content-project3, #content-project4, #content-project5, #content-project6  {
+#content-project2,
+#content-project3,
+#content-project4,
+#content-project5,
+#content-project6 {
   /* display: flex; */
   /* display: none; */
   flex-direction: column;
@@ -357,11 +389,14 @@ h2 {
 .img-lang {
   display: flex;
   margin: auto;
+  background-color: var(--color-blue-dark);
+  border-radius: 5px;
 }
 
 .img-lang a {
   place-self: center;
-  color: var(--color-blue-dark);
+  color: var(--color-light);
+  margin-right: 0.3rem;
 }
 
 /* <!--___________________3 ÈME BOÎTE : MENU  : CONTACT ________________________ -->  */
@@ -418,13 +453,21 @@ h2 {
 footer {
   display: flex;
   justify-content: space-around;
-  background-color: var(--color-orange);
   width: 100%;
-  color: var(--color-light);
+  color: var(--color-dark);
   margin: 0;
   padding: 0;
   align-items: center;
   height: 5vh;
+
+  -webkit-mask-image: linear-gradient(140deg, #000000, #f7a11f86, #000000);
+  -webkit-mask-size: 50%, 100%, auto, contain;
+  animation: clip-fade 1s infinite alternate;
+}
+
+@keyframes clip-fade {
+  50% { -webkit-mask-position: right; mask-position: right; }
+  100% { -webkit-mask-position: right; mask-position: right; }
 }
 
 footer img {
