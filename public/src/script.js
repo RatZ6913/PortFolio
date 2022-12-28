@@ -6,6 +6,14 @@ let spanWords = document.querySelectorAll('.span-second-text');
 // Bouton : Menu Ouvrir/Fermer Navbar
 menu.addEventListener('click', () => {
   nav.classList.toggle('btn-menu');
+
+  if (nav.classList.contains('btn-menu')) {
+    setTimeout(() => {
+      nav.style.display = "none";
+    }, 2000);
+  } else {
+    nav.style.display = "";
+  }
 });
 
 // Tableau String pour les balises <span>
@@ -52,5 +60,20 @@ spanWords.forEach((element, index) => {
   }, 700);
 });
 
+
+
+let about = document.querySelector('#about');
+let project = document.querySelector('#project');
+let contact = document.querySelector('#contact');
+
+let linkAbout = document.querySelector('#link-about');
+let linkProject = document.querySelector('#link-project');
+let linkContact = document.querySelector('#link-contact');
+
+console.log(about, project, contact);
+
+linkAbout.addEventListener('click', () => {
+
+});
 
 
