@@ -8,7 +8,7 @@ menu.addEventListener('click', () => {
 
   if (nav.classList.contains('btn-menu')) {
     setTimeout(() => {
-      nav.style.display = "none";      
+      nav.style.display = "none";
     }, 1800);
   } else {
     nav.style.display = "";
@@ -99,3 +99,17 @@ linkContact.addEventListener('click', () => {
 
 
 
+
+
+for (let n = 1; n <= 6; n++) {
+  let boxProject = document.querySelectorAll('#content-project' + n);
+  let linkNumber = document.querySelectorAll('#link-number' + n)
+
+  
+
+};
+
+
+
+
+ 

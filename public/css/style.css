@@ -262,7 +262,7 @@ h2 {
   margin: 0 auto;
 }
 
-#left-content .logo-languages {
+.logo-languages {
   display: flex;
   background-color: var(--color-light);
   border-radius: 5px; 
@@ -533,19 +533,15 @@ footer {
   align-items: center;
   height: 5vh;
 
-  -webkit-mask-image: linear-gradient(140deg, #000000, #f7a11f86, #000000);
-  mask-image: linear-gradient(140deg, #000000, #f7a11f86, #000000);
-  -webkit-mask-size: 50%, 100%, auto, contain;
-  mask-size: 50%, 100%, auto, contain;
-  -webkit-animation: clip-fade 1s infinite alternate;
-  animation: clip-fade 1s infinite alternate;
+  -webkit-mask-image: linear-gradient(150deg, #000000, #f7a11f86, #000000);
+  mask-image: linear-gradient(150deg, #000000, #f7a11f86, #000000);
+  -webkit-mask-size: 300%, 100%, auto, contain;
+  mask-size: 300%, 100%, auto, contain;
+  -webkit-animation: clip-fade 2s infinite alternate;
+  animation: clip-fade 2s infinite alternate;
 }
 
 @-webkit-keyframes clip-fade {
-  50% {
-    -webkit-mask-position: right;
-    mask-position: right;
-  }
   100% {
     -webkit-mask-position: right;
     mask-position: right;
