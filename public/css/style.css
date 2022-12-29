@@ -394,6 +394,21 @@ h2 {
   }
 }
 
+.spanTest {
+  display: block;
+  border: 4px groove var(--color-light);
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-dark);
+  border-radius: 50%;
+  margin: auto;
+  animation: spanCircle 2s infinite;
+}
+
+@keyframes spanCircle {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
 
 .content-project {
   /* display: flex; */
@@ -419,10 +434,6 @@ h2 {
   flex-direction: column;
   align-items: center;
 }
-
-/* .number-projectI {
-  display: flex;
-} */
 
 .img-project {
   width: 80%;

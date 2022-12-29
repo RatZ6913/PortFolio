@@ -110,14 +110,20 @@ let arrProjectNumber = document.querySelectorAll([
 ]);
 
 let projectNumber = (arr1, arr2) => {
+  let spanTest = document.createElement('span');
+  spanTest.classList.add('spanTest');
+
   for (let i = 0; i < arr1.length; i++) {
 
     arr1[i].addEventListener('click', () => {
       for (let j = 0; j < arr2.length; j++) {
-        if (j == i){
+        if (j == i) {
           arr2[j].style.display = "flex";
+          arr1[j].append(spanTest);
+          arr1[j].style.color = "white";
         } else {
           arr2[j].style.display = "none";
+          arr1[j].style.color = "";
         }
       }
     });
