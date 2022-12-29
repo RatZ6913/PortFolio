@@ -265,7 +265,7 @@ h2 {
 .logo-languages {
   display: flex;
   background-color: var(--color-light);
-  border-radius: 5px; 
+  border-radius: 5px;
   margin: auto;
 }
 
@@ -397,20 +397,13 @@ h2 {
 /* // Créée et inséré avec le Script.js  */
 .spanTest {
   display: block;
-  border: 4px groove var(--color-light);
-  width: 10px;
-  height: 10px;
-  background-color: var(--color-dark);
+  width: 50px;
+  height: 1px;
+  background-color: var(--color-light);
   border-radius: 50%;
   margin: auto;
-  animation: spanCircle 2s infinite;
+  margin-bottom: -50px;
 }
-
-@keyframes spanCircle {
-  0% { transform: rotate(0deg);}
-  100% { transform: rotate(360deg);}
-}
-
 
 /*_ _ _ _ _ _ BOITE DES DIFFERENTS PROJECTS _ _ _ _ _ _*/
 /* Je cache de base toutes les Boîtes de project  */
