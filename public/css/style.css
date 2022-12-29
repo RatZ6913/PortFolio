@@ -394,6 +394,7 @@ h2 {
   }
 }
 
+
 .content-project {
   /* display: flex; */
   display: none;
@@ -414,9 +415,14 @@ h2 {
 #content-project4,
 #content-project5,
 #content-project6 {
+  /* display: none; */
   flex-direction: column;
   align-items: center;
 }
+
+/* .number-projectI {
+  display: flex;
+} */
 
 .img-project {
   width: 80%;

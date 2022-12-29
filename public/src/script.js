@@ -109,7 +109,20 @@ let arrProjectNumber = document.querySelectorAll([
   "#content-project6",
 ]);
 
-console.log(arrLinkNumber);
-console.log(arrProjectNumber);
+let projectNumber = (arr1, arr2) => {
+  for (let i = 0; i < arr1.length; i++) {
 
+    arr1[i].addEventListener('click', () => {
+      for (let j = 0; j < arr2.length; j++) {
+        if (j == i){
+          arr2[j].style.display = "flex";
+        } else {
+          arr2[j].style.display = "none";
+        }
+      }
+    });
+  };
+};
+
+projectNumber(arrLinkNumber, arrProjectNumber);
 
