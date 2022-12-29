@@ -111,6 +111,11 @@ nav ul li:nth-child(4) a {
   color: var(--color-light);
 }
 
+nav ul li .active {
+  color: var(--color-light);
+  text-decoration: underline;
+}
+
 /* Top Page */
 section {
   width: 100%;
@@ -424,7 +429,8 @@ h2 {
   text-align: center;
   background-color: #d4a04d98;
   border-radius: 5px;
-  width: 90%;
+  width: 80%;
+  transition: 1s;
 }
 
 /* J'affiche de base Boîte n°1 de project  */
@@ -446,11 +452,11 @@ h2 {
 
 .img-project {
   width: 100%;
-  transition: 0.5s;
   min-height: 80%;
   filter: drop-shadow(6px 2px 2px var(--color-grey-light));
   transform: rotateX(11deg) rotateY(6deg);
   transform-style: preserve-3d;
+  transition: 1s;
 }
 
 .img-project:hover {

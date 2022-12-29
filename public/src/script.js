@@ -64,31 +64,47 @@ spanWords.forEach((element, index) => {
   }, 400);
 });
 
-let about = document.querySelector('#about');
-let project = document.querySelector('#project');
-let contact = document.querySelector('#contact');
 
-let linkAbout = document.querySelector('#nav-about');
-let linkProject = document.querySelector('#nav-project');
-let linkContact = document.querySelector('#nav-contact');
+// A OPTIMISER PLUS TARD // // // // // // // // // // // // // // // // // /
+let about = document.querySelector('#about');                               //
+let project = document.querySelector('#project');                           //
+let contact = document.querySelector('#contact');                           //
 
-linkAbout.addEventListener('click', () => {
-  about.style.display = "flex";
-  project.style.display = "none";
-  contact.style.display = "none";
+let linkAbout = document.querySelector('#nav-about');                       //
+let linkProject = document.querySelector('#nav-project');                   //
+let linkContact = document.querySelector('#nav-contact');                   //
+linkAbout.classList.add('active');                                        //
+
+linkAbout.addEventListener('click', () => {                                 //
+  about.style.display = "flex";                                             //
+  project.style.display = "none";                                           //
+  contact.style.display = "none";                                           //
+
+  linkAbout.classList.add('active');                                        //
+  linkProject.classList.remove('active');                                   //
+  linkContact.classList.remove('active');                                   //
 });
 
-linkProject.addEventListener('click', () => {
-  about.style.display = "none";
-  project.style.display = "flex";
-  contact.style.display = "none";
+linkProject.addEventListener('click', () => {                               //
+  about.style.display = "none";                                             //
+  project.style.display = "flex";                                           //
+  contact.style.display = "none";                                           //
+
+  linkAbout.classList.remove('active');                                     //
+  linkProject.classList.add('active');                                      //
+  linkContact.classList.remove('active');                                   //
 });
 
-linkContact.addEventListener('click', () => {
-  about.style.display = "none";
-  project.style.display = "none";
-  contact.style.display = "flex";
+linkContact.addEventListener('click', () => {                               //
+  about.style.display = "none";                                             //
+  project.style.display = "none";                                           //
+  contact.style.display = "flex";                                           //
+                               
+  linkAbout.classList.remove('active');                                     //
+  linkProject.classList.remove('active');                                   //
+  linkContact.classList.add('active');                                      //
 });
+// // // // // // // // // // // // // // // // // // // // // // // // // // 
 
 let arrLinkNumber = document.querySelectorAll([
   "#link-number1",
@@ -113,6 +129,8 @@ let projectNumber = (arr1, arr2) => {
   spanTest.classList.add('spanTest');
 
   for (let i = 0; i < arr1.length; i++) {  // [i] sera l'index de la longueur du tableau1
+    arr1[0].append(spanTest);
+    arr1[0].style.color = "white";
 
     arr1[i].addEventListener('click', () => { // À Chaque click, sur les liens "projets", je veux que
       for (let j = 0; j < arr2.length; j++) {  // l'index de arr2 (j), soient toutes comparées
@@ -130,4 +148,11 @@ let projectNumber = (arr1, arr2) => {
 };
 
 projectNumber(arrLinkNumber, arrProjectNumber);
+
+
+let previous = document.querySelector('#previous');
+let next = document.querySelector('#next');
+
+
+
 
