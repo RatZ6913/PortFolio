@@ -394,6 +394,7 @@ h2 {
   }
 }
 
+/* // Créée et inséré avec le Script.js  */
 .spanTest {
   display: block;
   border: 4px groove var(--color-light);
@@ -410,27 +411,34 @@ h2 {
   100% { transform: rotate(360deg);}
 }
 
+
+/*_ _ _ _ _ _ BOITE DES DIFFERENTS PROJECTS _ _ _ _ _ _*/
+/* Je cache de base toutes les Boîtes de project  */
 .content-project {
-  /* display: flex; */
   display: none;
+  justify-content: center;
   height: 100%;
   margin-top: 0.5rem;
 }
 
-/*_ _ _ _ _ _ BOITE DES DIFFERENTS PROJECTS _ _ _ _ _ _*/
+.content-project a {
+  margin: auto;
+  text-align: center;
+}
+
+/* J'affiche de base Boîte n°1 de project  */
 #content-project1 {
   display: flex;
-  /* display: none; */
   flex-direction: column;
   align-items: center;
 }
 
+/* Et qui avec le script.js, vont être affichés en fonction du click sur les liens avec le bon index */
 #content-project2,
 #content-project3,
 #content-project4,
 #content-project5,
 #content-project6 {
-  /* display: none; */
   flex-direction: column;
   align-items: center;
 }
@@ -443,7 +451,7 @@ h2 {
 
 .img-project:hover {
   cursor: pointer;
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 
 .btn-arrow {

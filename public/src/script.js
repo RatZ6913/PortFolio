@@ -90,7 +90,6 @@ linkContact.addEventListener('click', () => {
   contact.style.display = "flex";
 });
 
-
 let arrLinkNumber = document.querySelectorAll([
   "#link-number1",
   "#link-number2",
@@ -113,15 +112,15 @@ let projectNumber = (arr1, arr2) => {
   let spanTest = document.createElement('span');
   spanTest.classList.add('spanTest');
 
-  for (let i = 0; i < arr1.length; i++) {
+  for (let i = 0; i < arr1.length; i++) {  // [i] sera l'index de la longueur du tableau1
 
-    arr1[i].addEventListener('click', () => {
-      for (let j = 0; j < arr2.length; j++) {
-        if (j == i) {
+    arr1[i].addEventListener('click', () => { // À Chaque click, sur les liens "projets", je veux que
+      for (let j = 0; j < arr2.length; j++) {  // l'index de arr2 (j), soient toutes comparées
+        if (j == i) { // Et si index[j]  est égal à index[i], alors. Fais les instructions suivantes..
           arr2[j].style.display = "flex";
           arr1[j].append(spanTest);
           arr1[j].style.color = "white";
-        } else {
+        } else {  // Sinon, [j] est différent de [i], alors je cache les autres éléments // rmets les valeurs de base
           arr2[j].style.display = "none";
           arr1[j].style.color = "";
         }
