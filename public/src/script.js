@@ -78,26 +78,26 @@ linkAbout.classList.add('active');                                        //
 linkAbout.addEventListener('click', () => {                                 //
   about.style.display = "flex";                                             //
   project.style.display = "none";                                           //
-  contact.style.display = "none";        
+  contact.style.display = "none";
 
   setTimeout(() => {
-    about.classList.add('link-about-anim');          
+    about.classList.add('link-about-anim');
     project.classList.remove('link-project-anim');                                            //
     contact.classList.remove('link-contact-anim');                                       //
   }, 10);
 
   linkAbout.classList.add('active');                                        //
   linkProject.classList.remove('active');                                   //
-  linkContact.classList.remove('active');               
+  linkContact.classList.remove('active');
 });
 
 linkProject.addEventListener('click', () => {                               //
   about.style.display = "none";                                             //
   project.style.display = "flex";                                           //
-  contact.style.display = "none";         
-                                                                            //
+  contact.style.display = "none";
+  //
   setTimeout(() => {
-    project.classList.add('link-project-anim');      
+    project.classList.add('link-project-anim');
     about.classList.remove('link-about-anim');
     contact.classList.remove('link-contact-anim');                                      //
   }, 10);
@@ -110,10 +110,10 @@ linkProject.addEventListener('click', () => {                               //
 linkContact.addEventListener('click', () => {                               //
   about.style.display = "none";                                             //
   project.style.display = "none";                                           //
-  contact.style.display = "flex";                       
-  
+  contact.style.display = "flex";
+
   setTimeout(() => {
-    contact.classList.add('link-contact-anim');      
+    contact.classList.add('link-contact-anim');
     about.classList.remove('link-about-anim');
     project.classList.remove('link-project-anim');                                        //
   }, 10);
@@ -161,6 +161,7 @@ let projectNumber = (arr1, arr2) => {
           setTimeout(() => {
             arr2[j].classList.add('project-nb-anim');
             arr1[j].classList.add('link-nb-anim');
+
           }, 10);
 
         } else {  // Sinon, [j] est différent de [i], alors je cache les autres éléments // rmets les valeurs de base
@@ -177,24 +178,32 @@ let projectNumber = (arr1, arr2) => {
 projectNumber(arrLinkNumber, arrProjectNumber);
 
 
-
 let arrowBtnNav = (arr1, arr2) => {
   let i = 0;
   arr1[i].style.display = "flex";
-  
+
   // Bouton Suivant 
   next.addEventListener('click', () => {
     arr1[i].style.display = "none";
     arr2[i].style.color = "";
     i++;
 
+    setTimeout(() => {
+      arr1[i].classList.add('btn-project-next');
+      arr2[i].classList.add('btn-link-next');
+    }, 10);
+
+
     if (i == arr1.length) {
       i = 0;
     };
-
+    
     arr1[i].style.display = "flex";
     arr2[i].append(spanTest);
     arr2[i].style.color = "white";
+
+    arr1[i].classList.remove('btn-project-previous', 'btn-project-next');
+    arr2[i].classList.remove('btn-link-previous', 'btn-project-next' );
   });
 
   // Bouton Précédent 
@@ -203,6 +212,12 @@ let arrowBtnNav = (arr1, arr2) => {
     arr2[i].style.color = "";
     i--;
 
+    setTimeout(() => {
+      arr1[i].classList.add('btn-project-previous');
+      arr2[i].classList.add('btn-link-previous');
+
+    }, 10);
+
     if (i < 0) {
       i = arr1.length - 1;
     };
@@ -210,6 +225,9 @@ let arrowBtnNav = (arr1, arr2) => {
     arr1[i].style.display = "flex";
     arr2[i].append(spanTest);
     arr2[i].style.color = "white";
+
+    arr1[i].classList.remove('btn-project-previous', 'btn-project-next');
+    arr2[i].classList.remove('btn-link-previous', 'btn-project-next' );
   });
 };
 

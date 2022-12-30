@@ -475,7 +475,9 @@ h2 {
 }
 
 @keyframes projectNbAnim {
-  from {transform: translate(-0%, -25%);}
+  from {
+    transform: translate(-0%, -25%);
+  }
 }
 
 .img-project {
@@ -494,7 +496,7 @@ h2 {
 
 .btn-arrow {
   width: 75px;
-  background-color: #231c240e;
+  background-color: white;
   cursor: pointer;
   margin-left: 1rem;
   border-radius: 10px;
@@ -505,7 +507,57 @@ h2 {
 }
 
 .btn-arrow:hover {
-  background-color: #231c2493;
+  background-color: #231c2456;
+}
+
+.btn-project-next {
+  animation: next 0.5s ease-in-out;
+}
+
+@keyframes next {
+  0% {
+    z-index: -1;
+  }
+  25% {
+    transform: translate(100%);
+  }
+  35% {
+    transform: translate(-100%);
+    z-index: -1;
+  }
+  80% {
+    transform: translate(0%);
+    z-index: 1;
+  }
+}
+
+.btn-link-next {
+  transition: 1.5s;
+}
+
+.btn-project-previous {
+  animation: previous 0.5s ease-in-out;
+}
+
+@keyframes previous {
+  0% {
+    z-index: -1;
+  }
+  25% {
+    transform: translate(-100%);
+  }
+  35% {
+    transform: translate(100%);
+    z-index: -1;
+  }
+  80% {
+    transform: translate(0%);
+    z-index: 1;
+  }
+}
+
+.btn-link-previous {
+  transition: 1.5s;
 }
 
 .text-project {
