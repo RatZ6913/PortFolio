@@ -157,9 +157,18 @@ let projectNumber = (arr1, arr2) => {
           arr2[j].style.display = "flex";
           arr1[j].append(spanTest);
           arr1[j].style.color = "white";
+
+          setTimeout(() => {
+            arr2[j].classList.add('project-nb-anim');
+            arr1[j].classList.add('link-nb-anim');
+          }, 10);
+
         } else {  // Sinon, [j] est différent de [i], alors je cache les autres éléments // rmets les valeurs de base
           arr2[j].style.display = "none";
           arr1[j].style.color = "";
+
+          arr2[j].classList.remove('project-nb-anim');
+          arr1[j].classList.remove('link-nb-anim');
         }
       }
     });
