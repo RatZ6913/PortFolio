@@ -117,6 +117,15 @@ nav ul li .active {
   text-decoration: underline;
 }
 
+.link-about-anim, .link-project-anim {
+  animation:linkAbout 1.5s ease-in-out;
+}
+
+@keyframes linkAbout {
+  from {transform: translate(50%); transform: rotate3d(1, 2, 1, 0.5turn);}
+  to {transform: translate(0%); transform: rotate3d(1, 2, 1, 0.2rad);}
+}
+
 /* Top Page */
 section {
   width: 100%;
@@ -435,13 +444,13 @@ h2 {
 }
 
 /* J'affiche de base Boîte n°1 de project  */
-#content-project1 {
-  /* display: flex; */
+/* #content-project1 {
   flex-direction: column;
   align-items: center;
-}
+} */
 
 /* Et qui avec le script.js, vont être affichés en fonction du click sur les liens avec le bon index */
+#content-project1,
 #content-project2,
 #content-project3,
 #content-project4,

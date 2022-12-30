@@ -78,18 +78,37 @@ linkAbout.classList.add('active');                                        //
 linkAbout.addEventListener('click', () => {                                 //
   about.style.display = "flex";                                             //
   project.style.display = "none";                                           //
-  contact.style.display = "none";                                           //
+  contact.style.display = "none";        
+
+  setTimeout(() => {
+    about.classList.add('link-about-anim');                                            //
+    
+  }, 10);
+
+
+  project.classList.remove('link-project-anim');                                            //
+
 
   linkAbout.classList.add('active');                                        //
   linkProject.classList.remove('active');                                   //
-  linkContact.classList.remove('active');                                   //
+  linkContact.classList.remove('active');               
+  
+  //
 });
 
 linkProject.addEventListener('click', () => {                               //
   about.style.display = "none";                                             //
   project.style.display = "flex";                                           //
-  contact.style.display = "none";                                           //
+  contact.style.display = "none";         
 
+  about.classList.remove('link-about-anim');        
+                                                                            //
+  setTimeout(() => {
+    project.classList.add('link-project-anim');                                            //
+  }, 10);
+
+
+  
   linkAbout.classList.remove('active');                                     //
   linkProject.classList.add('active');                                      //
   linkContact.classList.remove('active');                                   //
@@ -150,44 +169,46 @@ let projectNumber = (arr1, arr2) => {
 projectNumber(arrLinkNumber, arrProjectNumber);
 
 
-let previous = document.querySelector('#previous');
-let next = document.querySelector('#next');
 
-let arrowBtnNav = (arr1) => {
+let arrowBtnNav = (arr1, arr2) => {
   let i = 0;
-  let n = 0;
   arr1[i].style.display = "flex";
-
+  
+  // Bouton Suivant 
   next.addEventListener('click', () => {
     arr1[i].style.display = "none";
-    arrLinkNumber[i].style.color = "";
+    arr2[i].style.color = "";
     i++;
 
     if (i == arr1.length) {
       i = 0;
-    }
+    };
 
     arr1[i].style.display = "flex";
-    arrLinkNumber[i].append(spanTest);
-    arrLinkNumber[i].style.color = "white";
+    arr2[i].append(spanTest);
+    arr2[i].style.color = "white";
   });
 
+  // Bouton Précédent 
   previous.addEventListener('click', () => {
     arr1[i].style.display = "none";
-    arrLinkNumber[i].style.color = "";
+    arr2[i].style.color = "";
     i--;
 
     if (i < 0) {
       i = arr1.length - 1;
-    }
+    };
 
     arr1[i].style.display = "flex";
-    arrLinkNumber[i].append(spanTest);
-    arrLinkNumber[i].style.color = "white";
-  })
+    arr2[i].append(spanTest);
+    arr2[i].style.color = "white";
+  });
 };
 
+arrowBtnNav(arrProjectNumber, arrLinkNumber);
 
 
 
-arrowBtnNav(arrProjectNumber);
+
+
+
