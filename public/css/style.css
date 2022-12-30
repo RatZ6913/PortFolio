@@ -118,13 +118,17 @@ nav ul li .active {
 }
 
 .link-about-anim, .link-project-anim {
-  animation:linkAbout 1.5s ease-in-out;
+  animation:linkAbout 2s ease-in-out;  
 }
 
 @keyframes linkAbout {
-  from {transform: translate(50%); transform: rotate3d(1, 2, 1, 0.5turn);}
-  to {transform: translate(0%); transform: rotate3d(1, 2, 1, 0.2rad);}
+  0%, 100% {transform: translate(50%); }
+  25% { transform: rotateY(90deg);}
+  75% { transform: rotate3d(1, 1, 1.5, 0.2rad);  } 
+  100% { transform: rotate(0deg);}
 }
+
+/* transform: rotate3d(1.1, 1.1, 1, 0.2turn); */
 
 /* Top Page */
 section {
