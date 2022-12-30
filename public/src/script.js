@@ -81,34 +81,27 @@ linkAbout.addEventListener('click', () => {                                 //
   contact.style.display = "none";        
 
   setTimeout(() => {
-    about.classList.add('link-about-anim');                                            //
-    
+    about.classList.add('link-about-anim');          
+    project.classList.remove('link-project-anim');                                            //
+    contact.classList.remove('link-contact-anim');                                       //
   }, 10);
-
-
-  project.classList.remove('link-project-anim');                                            //
-
 
   linkAbout.classList.add('active');                                        //
   linkProject.classList.remove('active');                                   //
   linkContact.classList.remove('active');               
-  
-  //
 });
 
 linkProject.addEventListener('click', () => {                               //
   about.style.display = "none";                                             //
   project.style.display = "flex";                                           //
   contact.style.display = "none";         
-
-  about.classList.remove('link-about-anim');        
                                                                             //
   setTimeout(() => {
-    project.classList.add('link-project-anim');                                            //
+    project.classList.add('link-project-anim');      
+    about.classList.remove('link-about-anim');
+    contact.classList.remove('link-contact-anim');                                      //
   }, 10);
 
-
-  
   linkAbout.classList.remove('active');                                     //
   linkProject.classList.add('active');                                      //
   linkContact.classList.remove('active');                                   //
@@ -117,7 +110,13 @@ linkProject.addEventListener('click', () => {                               //
 linkContact.addEventListener('click', () => {                               //
   about.style.display = "none";                                             //
   project.style.display = "none";                                           //
-  contact.style.display = "flex";                                           //
+  contact.style.display = "flex";                       
+  
+  setTimeout(() => {
+    contact.classList.add('link-contact-anim');      
+    about.classList.remove('link-about-anim');
+    project.classList.remove('link-project-anim');                                        //
+  }, 10);
 
   linkAbout.classList.remove('active');                                     //
   linkProject.classList.remove('active');                                   //

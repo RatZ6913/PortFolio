@@ -117,15 +117,16 @@ nav ul li .active {
   text-decoration: underline;
 }
 
-.link-about-anim, .link-project-anim {
-  animation:linkAbout 2s ease-in-out;  
+/* Animation : Des liens quand on click dessus */
+.link-about-anim, .link-project-anim, .link-contact-anim {
+  animation:linkNav 1s ease-in-out;
 }
 
-@keyframes linkAbout {
-  0%, 100% {transform: translate(50%); }
-  25% { transform: rotateY(90deg);}
-  75% { transform: rotate3d(1, 1, 1.5, 0.2rad);  } 
-  100% { transform: rotate(0deg);}
+@keyframes linkNav {
+  0%, 100% {transform: rotate3d(1.1, 1.1, 1, 0.2turn); }
+  25% { transform: translate(50%, -35%); }
+  80% { transform: scale(0.8); }
+  100% { transform: rotate(0deg); }
 }
 
 /* transform: rotate3d(1.1, 1.1, 1, 0.2turn); */
@@ -254,7 +255,6 @@ h2 {
   margin: auto;
   margin-top: 12vh;
   height: 75vh;
-  transition: 1s;
   background-image: url(../img/bg-img1.jpg);
   background-size: cover;
   background-position: center;
@@ -441,17 +441,10 @@ h2 {
 .content-project a {
   margin: auto;
   text-align: center;
-  background-color: #d4a04d98;
   border-radius: 5px;
   width: 80%;
   transition: 1s;
 }
-
-/* J'affiche de base Boîte n°1 de project  */
-/* #content-project1 {
-  flex-direction: column;
-  align-items: center;
-} */
 
 /* Et qui avec le script.js, vont être affichés en fonction du click sur les liens avec le bon index */
 #content-project1,
