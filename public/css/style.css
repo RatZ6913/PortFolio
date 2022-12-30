@@ -123,9 +123,8 @@ nav ul li .active {
 }
 
 @keyframes linkNav {
-  0%, 100% {transform: rotate3d(1.1, 1.1, 1, 0.2turn); }
-  25% { transform: translate(50%, -35%); }
-  80% { transform: scale(0.8); }
+  0% { transform: translate(50%, -35%); }
+  25%, 100% {transform: rotate3d(1.1, 1.1, 1, 0.2turn); }
   100% { transform: rotate(0deg); }
 }
 
