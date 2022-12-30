@@ -99,7 +99,7 @@ linkContact.addEventListener('click', () => {                               //
   about.style.display = "none";                                             //
   project.style.display = "none";                                           //
   contact.style.display = "flex";                                           //
-                               
+
   linkAbout.classList.remove('active');                                     //
   linkProject.classList.remove('active');                                   //
   linkContact.classList.add('active');                                      //
@@ -124,8 +124,9 @@ let arrProjectNumber = document.querySelectorAll([
   "#content-project6",
 ]);
 
+let spanTest = document.createElement('span');
+
 let projectNumber = (arr1, arr2) => {
-  let spanTest = document.createElement('span');
   spanTest.classList.add('spanTest');
 
   for (let i = 0; i < arr1.length; i++) {  // [i] sera l'index de la longueur du tableau1
@@ -146,13 +147,47 @@ let projectNumber = (arr1, arr2) => {
     });
   };
 };
-
 projectNumber(arrLinkNumber, arrProjectNumber);
 
 
 let previous = document.querySelector('#previous');
 let next = document.querySelector('#next');
 
+let arrowBtnNav = (arr1) => {
+  let i = 0;
+  let n = 0;
+  arr1[i].style.display = "flex";
+
+  next.addEventListener('click', () => {
+    arr1[i].style.display = "none";
+    arrLinkNumber[i].style.color = "";
+    i++;
+
+    if (i == arr1.length) {
+      i = 0;
+    }
+
+    arr1[i].style.display = "flex";
+    arrLinkNumber[i].append(spanTest);
+    arrLinkNumber[i].style.color = "white";
+  });
+
+  previous.addEventListener('click', () => {
+    arr1[i].style.display = "none";
+    arrLinkNumber[i].style.color = "";
+    i--;
+
+    if (i < 0) {
+      i = arr1.length - 1;
+    }
+
+    arr1[i].style.display = "flex";
+    arrLinkNumber[i].append(spanTest);
+    arrLinkNumber[i].style.color = "white";
+  })
+};
 
 
 
+
+arrowBtnNav(arrProjectNumber);
