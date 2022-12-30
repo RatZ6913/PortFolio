@@ -161,15 +161,13 @@ let projectNumber = (arr1, arr2) => {
           setTimeout(() => {
             arr2[j].classList.add('project-nb-anim');
             arr1[j].classList.add('link-nb-anim');
-
           }, 10);
 
         } else {  // Sinon, [j] est différent de [i], alors je cache les autres éléments // rmets les valeurs de base
           arr2[j].style.display = "none";
           arr1[j].style.color = "";
-
-          arr2[j].classList.remove('project-nb-anim');
-          arr1[j].classList.remove('link-nb-anim');
+          arr2[j].classList.remove('project-nb-anim', 'btn-project-previous', 'btn-project-next');
+          arr1[j].classList.remove('link-nb-anim', 'btn-link-previous', 'btn-link-next');
         }
       }
     });
@@ -201,9 +199,8 @@ let arrowBtnNav = (arr1, arr2) => {
     arr1[i].style.display = "flex";
     arr2[i].append(spanTest);
     arr2[i].style.color = "white";
-
-    arr1[i].classList.remove('btn-project-previous', 'btn-project-next');
-    arr2[i].classList.remove('btn-link-previous', 'btn-project-next' );
+    arr1[i].classList.remove('btn-project-previous', 'btn-project-next', 'project-nb-anim');
+    arr2[i].classList.remove('btn-link-previous', 'btn-link-next', 'link-nb-anim');
   });
 
   // Bouton Précédent 
@@ -215,7 +212,6 @@ let arrowBtnNav = (arr1, arr2) => {
     setTimeout(() => {
       arr1[i].classList.add('btn-project-previous');
       arr2[i].classList.add('btn-link-previous');
-
     }, 10);
 
     if (i < 0) {
@@ -225,9 +221,8 @@ let arrowBtnNav = (arr1, arr2) => {
     arr1[i].style.display = "flex";
     arr2[i].append(spanTest);
     arr2[i].style.color = "white";
-
-    arr1[i].classList.remove('btn-project-previous', 'btn-project-next');
-    arr2[i].classList.remove('btn-link-previous', 'btn-project-next' );
+    arr1[i].classList.remove('btn-project-previous', 'btn-project-next', 'project-nb-anim');
+    arr2[i].classList.remove('btn-link-previous', 'btn-link-next','link-nb-anim');
   });
 };
 
