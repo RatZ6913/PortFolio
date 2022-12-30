@@ -118,14 +118,25 @@ nav ul li .active {
 }
 
 /* Animation : Des liens quand on click dessus */
-.link-about-anim, .link-project-anim, .link-contact-anim {
-  animation:linkNav 1s ease-in-out;
+.link-about-anim,
+.link-project-anim,
+.link-contact-anim {
+  animation: linkNav 1s ease-in-out;
 }
 
 @keyframes linkNav {
-  0% { transform: translate(50%, -35%); }
-  25%, 100% {transform: rotate3d(1.1, 1.1, 1, 0.2turn); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: translate(50%, -35%);
+  }
+  10%, 80% {
+    width: 50%;
+  }
+  25% {
+    transform: rotate3d(1.1, 1.1, 1, 0.1turn);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /* transform: rotate3d(1.1, 1.1, 1, 0.2turn); */
@@ -425,7 +436,9 @@ h2 {
 }
 
 @keyframes spanline {
-  from { width: 20px; }
+  from {
+    width: 20px;
+  }
 }
 
 /*_ _ _ _ _ _ BOITE DES DIFFERENTS PROJECTS _ _ _ _ _ _*/
