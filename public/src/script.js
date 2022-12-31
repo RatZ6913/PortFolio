@@ -12,7 +12,7 @@ menu.addEventListener('click', () => {
     }, 1800);
   } else {
     nav.style.display = "";
-  }
+  };
 });
 
 // Tableau String pour les balises <span>
@@ -171,8 +171,8 @@ let projectNumber = (arr1, arr2) => {
           arr1[j].style.color = "";
           arr2[j].classList.remove('project-nb-anim', 'btn-project-previous', 'btn-project-next');
           arr1[j].classList.remove('link-nb-anim', 'btn-link-previous', 'btn-link-next');
-        }
-      }
+        };
+      };
     });
   };
 };
@@ -198,7 +198,7 @@ let arrowBtnNav = (arr1, arr2) => {
       if (arr2[j].style.color == "white") {
         i = [j];
       }
-    }
+    };
 
     setTimeout(() => {
       arr1[i].classList.add('btn-project-next');
@@ -225,8 +225,8 @@ let arrowBtnNav = (arr1, arr2) => {
     for (let j = 0; j < arr2.length; j++) {
       if (arr2[j].style.color == "white") {
         i = [j];
-      }
-    }
+      };
+    };
 
     setTimeout(() => {
       arr1[i].classList.add('btn-project-previous');
