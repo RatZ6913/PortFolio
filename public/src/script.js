@@ -154,9 +154,12 @@ let projectNumber = (arr1, arr2) => {
     arr1[i].addEventListener('click', () => { // À Chaque click, sur les liens "projets", je veux que
       for (let j = 0; j < arr2.length; j++) {  // l'index de arr2 (j), soient toutes comparées
         if (j == i) { // Et si index[j]  est égal à index[i], alors. Fais les instructions suivantes..
+
           arr2[j].style.display = "flex";
           arr1[j].append(spanTest);
           arr1[j].style.color = "white";
+
+          // arrowBtnNav(arr1, arr2);
 
           setTimeout(() => {
             arr2[j].classList.add('project-nb-anim');
@@ -176,26 +179,36 @@ let projectNumber = (arr1, arr2) => {
 projectNumber(arrLinkNumber, arrProjectNumber);
 
 
+// addEventListener('click', (e) => {
+//   console.log(e.target);
+// })
+
 let arrowBtnNav = (arr1, arr2) => {
   let i = 0;
+
   arr1[i].style.display = "flex";
 
   // Bouton Suivant 
-  next.addEventListener('click', () => {
+  next.addEventListener('click', (e) => {
     arr1[i].style.display = "none";
     arr2[i].style.color = "";
     i++;
+
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr2[j].style.color == "white") {
+        i = [j];
+      }
+    }
 
     setTimeout(() => {
       arr1[i].classList.add('btn-project-next');
       arr2[i].classList.add('btn-link-next');
     }, 10);
 
-
     if (i == arr1.length) {
       i = 0;
     };
-    
+
     arr1[i].style.display = "flex";
     arr2[i].append(spanTest);
     arr2[i].style.color = "white";
@@ -208,6 +221,12 @@ let arrowBtnNav = (arr1, arr2) => {
     arr1[i].style.display = "none";
     arr2[i].style.color = "";
     i--;
+
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr2[j].style.color == "white") {
+        i = [j];
+      }
+    }
 
     setTimeout(() => {
       arr1[i].classList.add('btn-project-previous');
@@ -222,14 +241,8 @@ let arrowBtnNav = (arr1, arr2) => {
     arr2[i].append(spanTest);
     arr2[i].style.color = "white";
     arr1[i].classList.remove('btn-project-previous', 'btn-project-next', 'project-nb-anim');
-    arr2[i].classList.remove('btn-link-previous', 'btn-link-next','link-nb-anim');
+    arr2[i].classList.remove('btn-link-previous', 'btn-link-next', 'link-nb-anim');
   });
 };
 
 arrowBtnNav(arrProjectNumber, arrLinkNumber);
-
-
-
-
-
-
