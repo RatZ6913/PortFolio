@@ -124,7 +124,7 @@ nav ul li .active {
 /* Animation : Des liens quand on click dessus */
 .link-about-anim,
 .link-project-anim,
-.link-contact-anim {
+.link-hobby-anim {
   animation: linkNav 1s ease-in-out;
 }
 
@@ -592,11 +592,11 @@ h2 {
 }
 
 /* <!--___________________3 ÈME BOÎTE : MENU  : CONTACT ________________________ -->  */
-#contact {
+#hobby {
   display: none;
   /* display: flex; */
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   width: 90%;
   margin: auto;
   margin-top: 12vh;
@@ -607,40 +607,11 @@ h2 {
   background-position: center;
 }
 
-#box-contact {
-  background-color: var(--color-light);
-  display: flex;
-}
-
-#box-contact h2 {
-  margin: auto;
-  color: var(--color-dark);
-}
-
-#contact-info {
-  display: flex;
-  width: 100%;
-  margin: 1rem auto;
-  flex-direction: column;
-  align-items: center;
-  background-color: #5a55558e;
+#box-hobby {
   color: var(--color-light);
 }
 
-#contact-info h3 {
-  color: var(--color-orange);
-  margin: auto;
-}
 
-#contact-info div {
-  display: flex;
-  margin: 0.5rem;
-}
-
-#contact-info a {
-  color: var(--color-light);
-  margin-left: 0.5rem;
-}
 
 footer {
   display: flex;
@@ -690,4 +661,8 @@ footer div a {
   display: flex;
   margin: auto 0.3rem;
   color: var(--color-blue-dark);
+}
+
+footer a:hover {
+  scale: 1.1;
 }

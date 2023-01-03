@@ -68,59 +68,59 @@ spanWords.forEach((element, index) => {
 // A OPTIMISER PLUS TARD // // // // // // // // // // // // // // // // // /
 let about = document.querySelector('#about');                               //
 let project = document.querySelector('#project');                           //
-let contact = document.querySelector('#contact');                           //
+let hobby = document.querySelector('#hobby');                           //
 
 let linkAbout = document.querySelector('#nav-about');                       //
 let linkProject = document.querySelector('#nav-project');                   //
-let linkContact = document.querySelector('#nav-contact');                   //
+let linkhobby = document.querySelector('#nav-hobby');                   //
 linkAbout.classList.add('active');                                        //
 
 linkAbout.addEventListener('click', () => {                                 //
   about.style.display = "flex";                                             //
   project.style.display = "none";                                           //
-  contact.style.display = "none";
+  hobby.style.display = "none";
 
   setTimeout(() => {
     about.classList.add('link-about-anim');
     project.classList.remove('link-project-anim');                                            //
-    contact.classList.remove('link-contact-anim');                                       //
+    hobby.classList.remove('link-hobby-anim');                                       //
   }, 10);
 
   linkAbout.classList.add('active');                                        //
   linkProject.classList.remove('active');                                   //
-  linkContact.classList.remove('active');
+  linkhobby.classList.remove('active');
 });
 
 linkProject.addEventListener('click', () => {                               //
   about.style.display = "none";                                             //
   project.style.display = "flex";                                           //
-  contact.style.display = "none";
+  hobby.style.display = "none";
   //
   setTimeout(() => {
     project.classList.add('link-project-anim');
     about.classList.remove('link-about-anim');
-    contact.classList.remove('link-contact-anim');                                      //
+    hobby.classList.remove('link-hobby-anim');                                      //
   }, 10);
 
   linkAbout.classList.remove('active');                                     //
   linkProject.classList.add('active');                                      //
-  linkContact.classList.remove('active');                                   //
+  linkhobby.classList.remove('active');                                   //
 });
 
-linkContact.addEventListener('click', () => {                               //
+linkhobby.addEventListener('click', () => {                               //
   about.style.display = "none";                                             //
   project.style.display = "none";                                           //
-  contact.style.display = "flex";
+  hobby.style.display = "flex";
 
   setTimeout(() => {
-    contact.classList.add('link-contact-anim');
+    hobby.classList.add('link-hobby-anim');
     about.classList.remove('link-about-anim');
     project.classList.remove('link-project-anim');                                        //
   }, 10);
 
   linkAbout.classList.remove('active');                                     //
   linkProject.classList.remove('active');                                   //
-  linkContact.classList.add('active');                                      //
+  linkhobby.classList.add('active');                                      //
 });
 // // // // // // // // // // // // // // // // // // // // // // // // // // 
 
