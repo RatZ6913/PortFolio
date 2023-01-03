@@ -39,6 +39,7 @@ let iconWeb = [
 
 // Text Writer : Pour les mots importants dans la partie Accueil
 spanWords.forEach((element, index) => {
+
   let textWriter = arrTypeWriter[index];
   let textWriter2 = arrTypeWriter2[index];
   let i = 0;
@@ -65,7 +66,7 @@ spanWords.forEach((element, index) => {
             i++;
           };
         }, 300);
-      }, 5000);
+      }, 4500);
     } else {
       i++;
     };
@@ -254,3 +255,27 @@ let arrowBtnNav = (arr1, arr2) => {
 };
 
 arrowBtnNav(arrProjectNumber, arrLinkNumber);
+
+
+let contentHobby = document.querySelectorAll([
+  '#game',
+  '#coding',
+  '#read',
+  '#computer',
+  '#podcast'
+]);
+
+
+contentHobby.forEach((element, index) => {
+  console.log(element , index);
+
+  element.addEventListener('mouseover', (e) => {{
+    if (index === 0) {
+      console.log(e);
+      contentHobby[0].classList.add('box-cat-hobby');
+      
+    }
+  }});
+});
+
+// 🎮

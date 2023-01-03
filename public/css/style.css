@@ -600,11 +600,27 @@ h2 {
 }
 
 #box-hobby {
-  color: var(--color-light);
+  display: flex;
+  flex-wrap: wrap;
+  height: 80%;
+  align-content: space-between;
+  justify-content: space-between;
+  margin: auto;
+  color: var(--color-dark);
 }
 
+#box-hobby div {
+  display: flex;
+  width: 30%;
+  background-color: var(--color-light);
+}
 
-
+#box-hobby h3 {
+  width: 100%;
+  text-align: center;
+  place-self: center;
+  margin: 1rem;
+}
 
 footer {
   display: flex;
@@ -659,4 +675,9 @@ footer div a {
 
 footer a:hover {
   scale: 1.1;
+}
+
+
+.box-cat-hobby {
+  background-color: red!important;
 }
