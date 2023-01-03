@@ -17,10 +17,17 @@ menu.addEventListener('click', () => {
 
 // Tableau String pour les balises <span>
 let arrTypeWriter = [
-  "Développement Web",
-  "FullStack",
+  "La Programmation Web",
+  "Le Front & le Back",
+  "Connaissances",
+  "De ma persévérance"
+];
+
+let arrTypeWriter2 = [
+  "Le Développement Web",
+  "Être FullStack",
   "Compétences",
-  "Expérience"
+  "De mon Expérience"
 ];
 
 let iconWeb = [
@@ -33,6 +40,7 @@ let iconWeb = [
 // Text Writer : Pour les mots importants dans la partie Accueil
 spanWords.forEach((element, index) => {
   let textWriter = arrTypeWriter[index];
+  let textWriter2 = arrTypeWriter2[index];
   let i = 0;
 
   // Je crée un interval, qui toute les 0.7miliseconds : Ajoute un string jusqu'à la longueur du tableau, dans la balise <span>
@@ -49,19 +57,19 @@ spanWords.forEach((element, index) => {
         element.textContent = ""; // Je vide les <span> pour refaire un autre interval,
 
         setInterval(() => {
-          element.textContent += textWriter[i];
-          if (i === textWriter.length) {
-            element.innerHTML = textWriter + `<img src="${iconWeb[index]}" class="logo-languages">`;
+          element.textContent += textWriter2[i];
+          if (i === textWriter2.length) {
+            element.innerHTML = arrTypeWriter2[index] + `<img src="${iconWeb[index]}" class="logo-languages">`;
             clearInterval(setInterval(interval));
           } else {
             i++;
           };
-        }, 400);
-      }, 3000);
+        }, 300);
+      }, 5000);
     } else {
       i++;
     };
-  }, 400);
+  }, 300);
 });
 
 

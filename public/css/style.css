@@ -203,32 +203,15 @@ h1 {
   color: var(--color-light);
   text-transform: uppercase;
   margin: auto;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
   margin-top: -1rem;
   overflow: hidden;
   -webkit-animation: title 15s steps(150) 5s infinite;
   animation: title 15s steps(150) 5s infinite;
-  height: 3vh;
+  height: 5vh;
   letter-spacing: 0.2rem;
   white-space: nowrap;
   transition: 1s;
-}
-
-@-webkit-keyframes title {
-  0% {
-    width: 0%;
-  }
-  40% {
-    text-decoration: underline;
-    color: var(--color-orange);
-  }
-  80% {
-    text-decoration: none;
-    color: var(--color-light);
-  }
-  100% {
-    width: 100%;
-  }
 }
 
 @keyframes title {
@@ -297,16 +280,17 @@ h2 {
 }
 
 .logo-languages {
-  display: flex;
+  position: absolute;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
   background-color: var(--color-light);
   border-radius: 5px;
-  margin: auto;
 }
 
 #second-text {
   background-color: #d4a04dc2;
   padding: 1rem;
-  color: var(--color-light);
+  color: var(--color-light); 
 }
 
 .span-second-text {
@@ -607,9 +591,18 @@ h2 {
   background-position: center;
 }
 
+#hobby h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee5e;
+  height: 5vh;
+}
+
 #box-hobby {
   color: var(--color-light);
 }
+
 
 
 
@@ -617,11 +610,12 @@ footer {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  color: var(--color-dark);
+  color: var(--color-light);
   margin: 0;
   padding: 0;
   align-items: center;
   height: 5vh;
+  background-color: var(--color-grey-light);
 
   -webkit-mask-image: linear-gradient(150deg, #000000, #f7a11f86, #000000);
   mask-image: linear-gradient(150deg, #000000, #f7a11f86, #000000);
