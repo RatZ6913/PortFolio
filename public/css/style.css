@@ -601,24 +601,39 @@ h2 {
 
 #box-hobby {
   display: flex;
-  flex-wrap: wrap;
-  height: 80%;
-  align-content: space-between;
-  justify-content: space-between;
+  height: 50%;
+  width: 80%;
   margin: auto;
-  color: var(--color-dark);
+  background-color: var(--color-blue-dark);
+  border-radius: 10px;
+  background-image: url(/public/img/bg-img2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 2s;
+}
+
+#box-hobby:hover {
+  width: 100%;
+  transition: 2s;
+  height: 100%;
+
 }
 
 #box-hobby div {
   display: flex;
-  width: 30%;
+  width: 110%;
+  margin: 1rem;
   background-color: var(--color-light);
+  filter: blur(2px) brightness(50%);
+  transition: 2s;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+
 }
 
 #box-hobby h3 {
   width: 100%;
   text-align: center;
-  place-self: center;
   margin: 1rem;
 }
 
@@ -678,6 +693,3 @@ footer a:hover {
 }
 
 
-.box-cat-hobby {
-  background-color: red!important;
-}
