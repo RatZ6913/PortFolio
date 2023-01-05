@@ -304,10 +304,10 @@ contentHobby.forEach((element, index) => {
 
   element.addEventListener("mouseenter", (e) => {
     element.style.filter = "none";
-    element.style.height = "30%";
+    element.style.height = "25%";
     element.style.opacity = "100%";
     boxHobby.style.backgroundImage = arrHobbyBg[index];
-    boxHobby.style.animation = "bgImgHobby 1.5s linear";
+    boxHobby.style.transition = "1s";
   });
 
   element.addEventListener("mouseleave", (e) => {
