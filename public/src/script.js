@@ -287,25 +287,33 @@ let contentHobby = document.querySelectorAll([
   "#coding",
   "#read",
   "#computer",
-  "#podcast",
+  "#podcast"
 ]);
 
+let arrHobbyBg = [
+  "url('./public/img/gaming.jpg')",
+  "url('./public/img/coding.png')",
+  "url('./public/img/reading.png')",
+  "url('./public/img/hardware.jpg')",
+  "url('./public/img/podcast.jpg')"
+];
+
 contentHobby.forEach((element, index) => {
+  let boxHobby = document.querySelector('#box-hobby');
   console.log(element, index);
 
-  element.addEventListener("mouseover", (e) => {
-    element.style.width = "50%";
-    // element.style.height = "10vh";
+  element.addEventListener("mouseenter", (e) => {
     element.style.filter = "none";
-    // element.style.flexDirection = "row";
-    // element.style.borderRadius = "50%";
-    // element.style.transform = "rotate(90deg)";
+    element.style.height = "30%";
+    element.style.opacity = "100%";
+    boxHobby.style.backgroundImage = arrHobbyBg[index];
+    boxHobby.style.animation = "bgImgHobby 1.5s linear";
   });
 
   element.addEventListener("mouseleave", (e) => {
-    element.style.width = "";
-    element.style.transform = "";
+    element.style.filter = "";
+    element.style.height = "";
+    element.style.opacity = "";
   });
 });
 
-// 🎮

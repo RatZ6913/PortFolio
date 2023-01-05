@@ -290,7 +290,7 @@ h2 {
 #second-text {
   background-color: #d4a04dc2;
   padding: 1rem;
-  color: var(--color-light); 
+  color: var(--color-light);
 }
 
 .span-second-text {
@@ -579,20 +579,20 @@ h2 {
 #hobby {
   display: none;
   /* display: flex; */
-  flex-direction: column;
-  /* justify-content: space-between; */
+  flex-wrap: wrap;
   width: 90%;
   margin: auto;
   margin-top: 12vh;
   height: 75vh;
   transition: 1s;
-  background-image: url(../img/bg-img5.jpg);
+  background-image: url(../img/bg-img2.jpg);
   background-size: cover;
   background-position: center;
 }
 
 #hobby h2 {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
   background-color: #eeeeee5e;
@@ -601,42 +601,52 @@ h2 {
 
 #box-hobby {
   display: flex;
-  height: 50%;
-  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  /* justify-content: space-evenly; */
   margin: auto;
-  background-color: var(--color-blue-dark);
-  border-radius: 10px;
-  background-image: url(/public/img/bg-img2.jpg);
-  background-size: cover;
+  width: 80%;
+  height: 80%;
+  /* background-color: var(--color-blue-dark); */
+  /* border-radius: 35px; */
+  /* background-image: url(/public/img/gaming.jpg); */
+  background-size: 65%, contain;
+  background-position: center;
   background-repeat: no-repeat;
-  transition: 2s;
-}
-
-#box-hobby:hover {
-  width: 100%;
-  transition: 2s;
-  height: 100%;
-
+  opacity: 85%;
 }
 
 #box-hobby div {
   display: flex;
-  width: 110%;
-  margin: 1rem;
+  width: 20%;
+  height: 10vh;
+  margin: 0.1rem 0;
   background-color: var(--color-light);
-  filter: blur(2px) brightness(50%);
+  color: var(--color-dark);
+  filter: blur(2px);
   transition: 2s;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  transition: 1.5s;  
+  opacity: 90%;
+}
 
+#box-hobby div:hover {
+  width: 35%;
+  background-color: var(--color-dark);
+  color: white;
+  text-decoration: underline;
+  font-size: x-large;
+  transition: 2s;
 }
 
 #box-hobby h3 {
-  width: 100%;
+  margin: auto;
   text-align: center;
-  margin: 1rem;
+  transition: 2s;
 }
 
+/* PARTIE : FOOTER  */
 footer {
   display: flex;
   justify-content: space-around;
@@ -691,5 +701,3 @@ footer div a {
 footer a:hover {
   scale: 1.1;
 }
-
-
