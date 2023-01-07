@@ -318,6 +318,7 @@ contentHobby.forEach((element, index) => {
   let boxHobby = document.querySelector('#box-hobby');
   let boxInCatHobby = document.createElement('section');
   boxInCatHobby.classList.add('boxInCatHobby');
+  boxInCatHobby.dataset.number = index;
 
   let titleInCatHobby = document.createElement('h4');
   titleInCatHobby.classList.add('titleInCatHobby');
@@ -325,8 +326,6 @@ contentHobby.forEach((element, index) => {
 
   let textInBoxCatHobby = document.createElement('p');
   textInBoxCatHobby.classList.add('textInBoxCatHobby');
-  // textInBoxCatHobby.textContent = arrTextInBoxHobby[index];
-
 
   element.addEventListener('mouseenter', (e) => {
     element.style.filter = "none";
@@ -339,25 +338,38 @@ contentHobby.forEach((element, index) => {
     boxInCatHobby.prepend(titleInCatHobby);
     titleInCatHobby.after(textInBoxCatHobby);
 
+    if (boxInCatHobby.dataset.number == 2) {
+      boxInCatHobby.style.flexDirection = "column-reverse";
+    } else if (boxInCatHobby.dataset.number == 3) {
+      console.log(boxInCatHobby.dataset.number);
+      boxInCatHobby.style.flexDirection = "column-reverse";
+    } else if (boxInCatHobby.dataset.number == 4) {
+      boxInCatHobby.style.flexDirection = "column-reverse";
+    }
+
     let n = 0;
     let indexBox = arrTextInBoxHobby[index];
 
-    setInterval(() => {
-      if (n === indexBox.length) {
-        textInBoxCatHobby.textContent = indexBox;
-      } else {
-        textInBoxCatHobby.textContent += indexBox[n];
-        n++;
-        clearInterval(setInterval());
-      };
-    }, 10);
+    timeoutId = setTimeout(() => {
+      intervalId = setInterval(() => {
+        if (n === indexBox.length) {
+          clearInterval(intervalId);
+          textInBoxCatHobby.textContent = indexBox;
+        } else {
+          textInBoxCatHobby.textContent += indexBox[n];
+          n++;
+        };
+      }, 30);
+    }, 2500);
   });
-
 
   element.addEventListener('mouseleave', (e) => {
     element.style.filter = "";
     element.style.height = "";
     element.style.opacity = "";
     element.removeChild(boxInCatHobby);
+    textInBoxCatHobby.textContent = "";
+    clearInterval(intervalId);
+    clearTimeout(timeoutId);
   });
 });

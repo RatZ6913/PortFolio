@@ -663,7 +663,7 @@ h2 {
   align-items: center;
   background-image: url(../img/bg-img1.jpg);
   text-decoration: underline;
-  animation: titleInCatHobby 1.5s linear 1s;
+  animation: titleInCatHobby 1.5s linear 1.5s;
   min-block-size: -webkit-fill-available;
 }
 
@@ -672,17 +672,18 @@ h2 {
   to { width: 40%; opacity: 100%; }
 }
 
-.titleInCatHobby:hover {
-  border-radius: 35px;
-  transition: 1.5s;
-}
-
 .textInBoxCatHobby {
   width: 100%;
   padding: 0 5rem 0.5rem 5rem;
   text-align: center;
   background-image: url(../img/bg-img1.jpg);
   font-size: 18px;
+  animation: textInBoxCatHobby 2s linear;
+}
+
+@keyframes textInBoxCatHobby {
+  from { width: 0%; opacity: 0%; }
+  to { width: 100%;  opacity: 100%; }
 }
 
 /* PARTIE : FOOTER  */
