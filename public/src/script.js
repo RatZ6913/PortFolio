@@ -306,14 +306,28 @@ let arrTextHobby = [
   "Quelles plateformes ?"
 ];
 
+let arrTextInBoxHobby = [
+  "Je suis attiré par les jeux de compétition et j'aime mettre mes compétences à l'épreuve. En plus de jouer pour le plaisir, j'aime aussi passer du temps à farmer dans les jeux pour améliorer mon équipement et mes personnages. Je suis à la recherche de nouveaux défis pour m'améliorer en tant que joueur.",
+  "Pour améliorer mes compétences en programmation web, je m'entraîne régulièrement sur des exercices en ligne, des projets personnels ou des tutoriels vidéo. J'ai soif d'apprentissage et je suis déterminé à devenir un développeur expérimenté et compétent.",
+  "Actuellement, j'ai entrepris de lire 'Clean Code' de Robert C. Martin, un ouvrage qui m'aide à écrire du code propre et structuré. J'apprécie la façon dont l'auteur aborde les concepts de manière concrète et pratique.",
+  "J'aime être au courant des derniers développements en matière de composants informatiques, comme les cartes graphiques, les processeurs et autres...",
+  "Pour me tenir au courant, je me tourne vers des podcasts sur YouTube et Spotify pour obtenir des informations sur le développement web."
+];
+
 contentHobby.forEach((element, index) => {
   let boxHobby = document.querySelector('#box-hobby');
   let boxInCatHobby = document.createElement('section');
   boxInCatHobby.classList.add('boxInCatHobby');
-  boxInCatHobby.textContent = arrTextHobby[index];
 
+  let titleInCatHobby = document.createElement('h4');
+  titleInCatHobby.classList.add('titleInCatHobby');
+  titleInCatHobby.textContent = arrTextHobby[index];
 
-  element.addEventListener("mouseenter", (e) => {
+  let textInBoxCatHobby = document.createElement('p');
+  textInBoxCatHobby.classList.add('textInBoxCatHobby');
+  textInBoxCatHobby.textContent = arrTextInBoxHobby[index];
+
+  element.addEventListener('mouseenter', (e) => {
     element.style.filter = "none";
     element.style.height = "25%";
     element.style.opacity = "100%";
@@ -321,16 +335,19 @@ contentHobby.forEach((element, index) => {
     boxHobby.style.transition = "0.5s";
 
     element.append(boxInCatHobby);
+    boxInCatHobby.prepend(titleInCatHobby);
 
-
+    titleInCatHobby.addEventListener('click', () => {
+      titleInCatHobby.after(textInBoxCatHobby);
+    })
   });
 
-  element.addEventListener("mouseleave", (e) => {
+  element.addEventListener('mouseleave', (e) => {
     element.style.filter = "";
     element.style.height = "";
     element.style.opacity = "";
     element.removeChild(boxInCatHobby);
-
+    titleInCatHobby.removeChild(textInBoxCatHobby);
   });
 });
 
