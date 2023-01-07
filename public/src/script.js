@@ -298,22 +298,39 @@ let arrHobbyBg = [
   "url('./public/img/podcast.jpg')"
 ];
 
+let arrTextHobby = [
+  "Quels jeux ?",
+  "Quelles technologies ?",
+  "Quels livres ?",
+  "Quels composants ?",
+  "Quelles plateformes ?"
+];
+
 contentHobby.forEach((element, index) => {
   let boxHobby = document.querySelector('#box-hobby');
-  console.log(element, index);
+  let boxInCatHobby = document.createElement('section');
+  boxInCatHobby.classList.add('boxInCatHobby');
+  boxInCatHobby.textContent = arrTextHobby[index];
+
 
   element.addEventListener("mouseenter", (e) => {
     element.style.filter = "none";
     element.style.height = "25%";
     element.style.opacity = "100%";
     boxHobby.style.backgroundImage = arrHobbyBg[index];
-    boxHobby.style.transition = "1s";
+    boxHobby.style.transition = "0.5s";
+
+    element.append(boxInCatHobby);
+
+
   });
 
   element.addEventListener("mouseleave", (e) => {
     element.style.filter = "";
     element.style.height = "";
     element.style.opacity = "";
+    element.removeChild(boxInCatHobby);
+
   });
 });
 
