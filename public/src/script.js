@@ -325,29 +325,39 @@ contentHobby.forEach((element, index) => {
 
   let textInBoxCatHobby = document.createElement('p');
   textInBoxCatHobby.classList.add('textInBoxCatHobby');
-  textInBoxCatHobby.textContent = arrTextInBoxHobby[index];
+  // textInBoxCatHobby.textContent = arrTextInBoxHobby[index];
+
 
   element.addEventListener('mouseenter', (e) => {
     element.style.filter = "none";
-    element.style.height = "25%";
+    element.style.height = "15vh";
     element.style.opacity = "100%";
     boxHobby.style.backgroundImage = arrHobbyBg[index];
     boxHobby.style.transition = "0.5s";
 
     element.append(boxInCatHobby);
     boxInCatHobby.prepend(titleInCatHobby);
+    titleInCatHobby.after(textInBoxCatHobby);
 
-    titleInCatHobby.addEventListener('click', () => {
-      titleInCatHobby.after(textInBoxCatHobby);
-    })
+    let n = 0;
+    let indexBox = arrTextInBoxHobby[index];
+
+    setInterval(() => {
+      if (n === indexBox.length) {
+        textInBoxCatHobby.textContent = indexBox;
+      } else {
+        textInBoxCatHobby.textContent += indexBox[n];
+        n++;
+        clearInterval(setInterval());
+      };
+    }, 10);
   });
+
 
   element.addEventListener('mouseleave', (e) => {
     element.style.filter = "";
     element.style.height = "";
     element.style.opacity = "";
     element.removeChild(boxInCatHobby);
-    titleInCatHobby.removeChild(textInBoxCatHobby);
   });
 });
-
