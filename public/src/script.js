@@ -314,6 +314,11 @@ let arrTextInBoxHobby = [
   "Pour me tenir au courant, je me tourne vers des podcasts sur YouTube et Spotify pour obtenir des informations sur le développement web."
 ];
 
+let arrAvatarLoad = [
+  "url('./public/img/avatar2.png')",
+  "url('./public/img/avatar3.png')",
+];
+
 contentHobby.forEach((element, index) => {
   let boxHobby = document.querySelector('#box-hobby');
   let boxInCatHobby = document.createElement('section');
@@ -327,6 +332,10 @@ contentHobby.forEach((element, index) => {
   let textInBoxCatHobby = document.createElement('p');
   textInBoxCatHobby.classList.add('textInBoxCatHobby');
 
+  let indexBox = arrTextInBoxHobby[index];
+  let circleLoad = document.createElement('span');
+  circleLoad.classList.add('circleLoad');
+
   element.addEventListener('mouseenter', (e) => {
     element.style.filter = "none";
     element.style.height = "15vh";
@@ -337,6 +346,7 @@ contentHobby.forEach((element, index) => {
     element.append(boxInCatHobby);
     boxInCatHobby.prepend(titleInCatHobby);
     titleInCatHobby.after(textInBoxCatHobby);
+    textInBoxCatHobby.before(circleLoad);
 
     if (boxInCatHobby.dataset.number == 2) {
       boxInCatHobby.style.flexDirection = "column-reverse";
@@ -356,21 +366,16 @@ contentHobby.forEach((element, index) => {
   });
 
   let n = 0;
-  let indexBox = arrTextInBoxHobby[index];
-
-
-  let circleLoad = document.createElement('span');
-  circleLoad.classList.add('circleLoad');
-
   titleInCatHobby.addEventListener('click', () => {
-
-    titleInCatHobby.after(circleLoad);
-
     timeoutId = setTimeout(() => {
       intervalId = setInterval(() => {
+        let random = Math.floor(Math.random()* 3);
+
         if (n === indexBox.length) {
           textInBoxCatHobby.textContent = indexBox;
         } else {
+        circleLoad.style.backgroundImage = arrAvatarLoad[random];
+
           textInBoxCatHobby.textContent += indexBox[n];
           n++;
         };

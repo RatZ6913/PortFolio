@@ -695,21 +695,20 @@ h2 {
 
 .circleLoad {
   text-align: center;
-  width: 25px;
-  height: 25px;
-  padding: 25px;
-  margin: 25px;
-  transition: 1.5s;
-  background-color: green;
-  color: green;
-  border-radius: 50%;
-  /* margin-top: 0.2rem; */
+  /* background-image: url(../img/avatar2.png); */
+  background-size: contain;
+  padding: 50px;
+  margin: 5px;
+  /* transition: 1.5s; */
+  /* background-color: green; */
+  /* color: green; */
+  border-radius: 25px;
 }
 
 
 .textInBoxCatHobby {
   width: 100%;
-  padding: 0 5rem 0.5rem 5rem;
+  padding: 0 2rem 0rem 2rem;
   text-align: center;
   background-image: url(../img/bg-img1.jpg);
   font-size: 18px;
@@ -718,7 +717,7 @@ h2 {
 
 @keyframes textInBoxCatHobby {
   from { width: 0%; opacity: 0%; }
-  to { width: 100%;  opacity: 100%; }
+  to { width: 100%;  opacity: 100%;}
 }
 
 /* PARTIE : FOOTER  */
