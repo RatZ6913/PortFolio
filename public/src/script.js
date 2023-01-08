@@ -346,21 +346,23 @@ contentHobby.forEach((element, index) => {
     } else if (boxInCatHobby.dataset.number == 4) {
       boxInCatHobby.style.flexDirection = "column-reverse";
     }
-
+  });
     let n = 0;
     let indexBox = arrTextInBoxHobby[index];
+
+    titleInCatHobby.addEventListener('click', () => {
+
 
     timeoutId = setTimeout(() => {
       intervalId = setInterval(() => {
         if (n === indexBox.length) {
-          clearInterval(intervalId);
           textInBoxCatHobby.textContent = indexBox;
         } else {
           textInBoxCatHobby.textContent += indexBox[n];
           n++;
         };
       }, 30);
-    }, 2500);
+    }, 1000);
   });
 
   element.addEventListener('mouseleave', (e) => {
@@ -369,7 +371,7 @@ contentHobby.forEach((element, index) => {
     element.style.opacity = "";
     element.removeChild(boxInCatHobby);
     textInBoxCatHobby.textContent = "";
-    clearInterval(intervalId);
-    clearTimeout(timeoutId);
+    // clearInterval(intervalId);
+    // clearTimeout(timeoutId);
   });
 });
