@@ -369,13 +369,12 @@ contentHobby.forEach((element, index) => {
   titleInCatHobby.addEventListener('click', () => {
     timeoutId = setTimeout(() => {
       intervalId = setInterval(() => {
-        let random = Math.floor(Math.random()* 3);
-
+        let random = Math.floor(Math.random() * 3);
         if (n === indexBox.length) {
           textInBoxCatHobby.textContent = indexBox;
+          circleLoad.style.backgroundImage = arrAvatarLoad[0];
         } else {
-        circleLoad.style.backgroundImage = arrAvatarLoad[random];
-
+          circleLoad.style.backgroundImage = arrAvatarLoad[random];
           textInBoxCatHobby.textContent += indexBox[n];
           n++;
         };

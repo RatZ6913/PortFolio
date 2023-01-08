@@ -622,9 +622,6 @@ h2 {
   color: var(--color-dark);
   filter: blur(2px);
   transition: 2s;
-  /* border-top-right-radius: 50px; */
-  /* border-bottom-right-radius: 50px; */
-  /* transition: 1.5s; */
   opacity: 90%;
 }
 
@@ -681,36 +678,20 @@ h2 {
   color: green;
 }
 
-/* .titleInCatHobby:hover::after {
-  visibility: hidden;
-  content: '';
-  text-align: center;
-  width: 25px;
-  height: 25px;
-  transition: 1.5s;
-  background-color: green;
-  border-radius: 50%;
-  margin-top: 0.2rem;
-} */
-
 .circleLoad {
   text-align: center;
-  /* background-image: url(../img/avatar2.png); */
   background-size: contain;
   padding: 50px;
   margin: 5px;
-  /* transition: 1.5s; */
-  /* background-color: green; */
-  /* color: green; */
   border-radius: 25px;
 }
-
 
 .textInBoxCatHobby {
   width: 100%;
   padding: 0 2rem 0rem 2rem;
   text-align: center;
   background-image: url(../img/bg-img1.jpg);
+  opacity: 90%;
   font-size: 18px;
   animation: textInBoxCatHobby 2s linear;
 }
