@@ -658,6 +658,8 @@ h2 {
 
 .titleInCatHobby {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -671,6 +673,39 @@ h2 {
   from { width: 0%; opacity: 0%; }
   to { width: 40%; opacity: 100%; }
 }
+
+.titleInCatHobby:hover::before {
+  content: 'Cliquez Ici';
+  text-align: center;
+  transition: 1.5s;
+  color: green;
+}
+
+/* .titleInCatHobby:hover::after {
+  visibility: hidden;
+  content: '';
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  transition: 1.5s;
+  background-color: green;
+  border-radius: 50%;
+  margin-top: 0.2rem;
+} */
+
+.circleLoad {
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  padding: 25px;
+  margin: 25px;
+  transition: 1.5s;
+  background-color: green;
+  color: green;
+  border-radius: 50%;
+  /* margin-top: 0.2rem; */
+}
+
 
 .textInBoxCatHobby {
   width: 100%;

@@ -347,11 +347,24 @@ contentHobby.forEach((element, index) => {
       boxInCatHobby.style.flexDirection = "column-reverse";
     }
   });
-    let n = 0;
-    let indexBox = arrTextInBoxHobby[index];
 
-    titleInCatHobby.addEventListener('click', () => {
+  element.addEventListener('mouseleave', (e) => {
+    element.style.filter = "";
+    element.style.height = "";
+    element.style.opacity = "";
+    element.removeChild(boxInCatHobby);
+  });
 
+  let n = 0;
+  let indexBox = arrTextInBoxHobby[index];
+
+
+  let circleLoad = document.createElement('span');
+  circleLoad.classList.add('circleLoad');
+
+  titleInCatHobby.addEventListener('click', () => {
+
+    titleInCatHobby.after(circleLoad);
 
     timeoutId = setTimeout(() => {
       intervalId = setInterval(() => {
@@ -361,17 +374,7 @@ contentHobby.forEach((element, index) => {
           textInBoxCatHobby.textContent += indexBox[n];
           n++;
         };
-      }, 30);
+      }, 50);
     }, 1000);
-  });
-
-  element.addEventListener('mouseleave', (e) => {
-    element.style.filter = "";
-    element.style.height = "";
-    element.style.opacity = "";
-    element.removeChild(boxInCatHobby);
-    textInBoxCatHobby.textContent = "";
-    // clearInterval(intervalId);
-    // clearTimeout(timeoutId);
   });
 });
