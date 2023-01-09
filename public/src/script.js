@@ -333,8 +333,11 @@ contentHobby.forEach((element, index) => {
   textInBoxCatHobby.classList.add('textInBoxCatHobby');
 
   let indexBox = arrTextInBoxHobby[index];
-  let circleLoad = document.createElement('span');
-  circleLoad.classList.add('circleLoad');
+  let avatarTalking = document.createElement('span');
+  avatarTalking.classList.add('avatarTalking');
+
+  let loadCircle = document.createElement('span');
+  loadCircle.classList.add('loadCircle');
 
   element.addEventListener('mouseenter', (e) => {
     element.style.filter = "none";
@@ -345,8 +348,9 @@ contentHobby.forEach((element, index) => {
 
     element.append(boxInCatHobby);
     boxInCatHobby.prepend(titleInCatHobby);
+    titleInCatHobby.before(loadCircle);
     titleInCatHobby.after(textInBoxCatHobby);
-    textInBoxCatHobby.before(circleLoad);
+    textInBoxCatHobby.before(avatarTalking);
 
     if (boxInCatHobby.dataset.number == 2) {
       boxInCatHobby.style.flexDirection = "column-reverse";
@@ -372,9 +376,14 @@ contentHobby.forEach((element, index) => {
         let random = Math.floor(Math.random() * 3);
         if (n === indexBox.length) {
           textInBoxCatHobby.textContent = indexBox;
-          circleLoad.style.backgroundImage = arrAvatarLoad[0];
+          avatarTalking.style.backgroundImage = arrAvatarLoad[0];
+          loadCircle.style.animation = "none";
+          loadCircle.style.borderColor = "white";
+          loadCircle.style.backgroundColor = "#FFA500";
+          titleInCatHobby.style.cursor = "auto";
         } else {
-          circleLoad.style.backgroundImage = arrAvatarLoad[random];
+          avatarTalking.style.backgroundImage = arrAvatarLoad[random];
+          loadCircle.style.display = "block";
           textInBoxCatHobby.textContent += indexBox[n];
           n++;
         };

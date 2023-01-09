@@ -614,7 +614,6 @@ h2 {
 
 #box-hobby div {
   display: flex;
-  /* justify-content: space-between; */
   width: 20%;
   height: 10vh;
   margin: 0.1rem 0;
@@ -629,7 +628,6 @@ h2 {
   width: 100%;
   background-color: var(--color-grey-light);
   color: white;
-  /* text-decoration: underline; */
   font-size: x-large;
   transition: 1.5s;
   border-top-right-radius: 0px;
@@ -639,7 +637,7 @@ h2 {
 #box-hobby h3 {
   margin: auto;
   text-align: center;
-  transition: 2s;
+  transition: 1s;
 }
 
 .boxInCatHobby {
@@ -662,23 +660,50 @@ h2 {
   align-items: center;
   background-image: url(../img/bg-img1.jpg);
   text-decoration: underline;
-  animation: titleInCatHobby 1.5s linear 1.5s;
+  animation: titleInCatHobby 1s linear 1s;
   min-block-size: -webkit-fill-available;
+  cursor: pointer;
 }
 
 @keyframes titleInCatHobby {
-  from { width: 0%; opacity: 0%; }
-  to { width: 40%; opacity: 100%; }
+  from {
+    width: 0%;
+    opacity: 0%;
+  }
+  to {
+    width: 40%;
+    opacity: 100%;
+  }
 }
 
-.titleInCatHobby:hover::before {
-  content: 'Cliquez Ici';
-  text-align: center;
-  transition: 1.5s;
-  color: green;
+.loadCircle {
+  /* display: block; */
+  display: none;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  margin: 8px;
+  border: 3px solid var(--color-orange);
+  background-color: var(--color-grey-light);
+  border-radius: 50%;
+  animation: loading 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: white white transparent transparent;
 }
 
-.circleLoad {
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+    background-color: var(--color-grey-light);
+    border-color: white white transparent transparent;
+  }
+  100% {
+    transform: rotate(360deg);
+    background-color: var(--color-orange);
+    border-color: var(--color-blue-dark) var(--color-blue-dark) transparent transparent;
+  }
+}
+
+.avatarTalking {
   text-align: center;
   background-size: contain;
   padding: 50px;
@@ -697,8 +722,14 @@ h2 {
 }
 
 @keyframes textInBoxCatHobby {
-  from { width: 0%; opacity: 0%; }
-  to { width: 100%;  opacity: 100%;}
+  from {
+    width: 0%;
+    opacity: 0%;
+  }
+  to {
+    width: 100%;
+    opacity: 100%;
+  }
 }
 
 /* PARTIE : FOOTER  */
@@ -713,8 +744,8 @@ footer {
   height: 5vh;
   background-color: var(--color-grey-light);
 
-  -webkit-mask-image: linear-gradient(150deg, #000000, #f7a11f86, #000000);
-  mask-image: linear-gradient(150deg, #000000, #f7a11f86, #000000);
+  -webkit-mask-image: linear-gradient(150deg, #000000, #f7a11fa1, #000000);
+  mask-image: linear-gradient(150deg, #000000, #f7a11f96, #000000);
   -webkit-mask-size: 300%, 100%, auto, contain;
   mask-size: 300%, 100%, auto, contain;
   -webkit-animation: clip-fade 2s infinite alternate;
