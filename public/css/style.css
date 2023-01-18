@@ -35,6 +35,7 @@ nav {
   text-align: center;
   transition: 2s;
   animation: openNav 2s ease;
+  margin-bottom: -0.5rem;
 }
 
 /* Animation : Ouverture Navbar */
@@ -162,7 +163,7 @@ nav ul li .active {
   position: absolute;
   top: 100%;
   z-index: -1;
-  color: #0b2b0b;
+  color: var(--color-blue-dark);
   animation: moveUp 5s infinite;
 }
 
@@ -171,7 +172,7 @@ nav ul li .active {
     transform: translateY(-100px);
   }
   100% {
-    transform: translateY(-950px);
+    transform: translateY(-920px);
   }
 }
 
@@ -269,7 +270,6 @@ h2 {
 /* DIFFÉRENTS CONTAINER : 1ERE BOÎTE */
 /*________________________ MENU : À PROPOS ________________________*/
 #about {
-  /* display: none; */
   display: flex;
   width: 90%;
   justify-content: space-around;
@@ -284,6 +284,7 @@ h2 {
 
 #left-content {
   display: flex;
+  width: 60%;
   flex-direction: column;
   text-align: center;
   background-color: #eeeeee49;
@@ -291,7 +292,6 @@ h2 {
 }
 
 #left-content div {
-  width: 80%;
   margin: 0 auto;
   padding: 1rem;
   background-color: var(--color-grey-light);
@@ -299,7 +299,7 @@ h2 {
 }
 
 #left-content p {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -323,9 +323,26 @@ h2 {
   background-color: #88979e81;
 }
 
-#right-content img:hover {
-  transform: scale(1.5);
-  transition: 0.5s;
+#right-content img:nth-child(2) {
+  animation: logoLang 2s infinite 2s;
+}
+
+#right-content img:nth-child(3) {
+  animation: logoLang 2s infinite 1.5s;
+}
+
+#right-content img:nth-child(4) {
+  animation: logoLang 2s infinite 1s;
+}
+
+#right-content img:nth-child(5) {
+  animation: logoLang 2s infinite 0.5s;
+}
+
+@keyframes logoLang {
+  0% { transform: scale(1);}
+  50% { transform: scale(1.3);}
+  100% { transform: scale(1);}
 }
 
 /*_____________ 2 ÈME BOÎTE : MENU : PROJETS ________________________*/
@@ -394,7 +411,6 @@ h2 {
 }
 
 #link-project a:hover::before {
-  /* content: ""; */
   opacity: 50%;
   position: absolute;
   height: 1.5rem;
@@ -595,7 +611,6 @@ h2 {
 /* <!--___________________3 ÈME BOÎTE : MENU  : CONTACT ________________________ -->  */
 #hobby {
   display: none;
-  /* display: flex; */
   flex-wrap: wrap;
   width: 90%;
   margin: auto;
@@ -637,8 +652,8 @@ h2 {
   margin: 0.1rem 0;
   background-color: var(--color-light);
   color: var(--color-dark);
-  filter: blur(2px);
-  transition: 2s;
+  filter: blur(1px);
+  transition: 1.5s;
   opacity: 90%;
 }
 
@@ -695,7 +710,6 @@ h2 {
 }
 
 .loadCircle {
-  /* display: block; */
   display: none;
   position: absolute;
   width: 25px;
@@ -757,6 +771,7 @@ footer {
   width: 100%;
   color: var(--color-light);
   margin: 0;
+  margin-top: 0.5rem;
   padding: 0;
   align-items: center;
   height: 5vh;
@@ -806,6 +821,5 @@ footer a:hover {
   scale: 1.1;
 }
 
-/* ///////////// */
 
 

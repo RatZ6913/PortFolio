@@ -25,7 +25,7 @@ createText = () => {
 
 setInterval(() => {
   createText();
-}, 1000);
+}, 1500);
 
 // Bouton : Menu Ouvrir/Fermer Navbar
 menu.addEventListener("click", () => {
