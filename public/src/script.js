@@ -15,7 +15,6 @@ createText = () => {
 
   let text = document.createElement('div');
   text.classList.add('textAnim');
-
   text.textContent = arrText[random];
 
   text.style.left = Math.random() * 100 + "%";
@@ -23,9 +22,9 @@ createText = () => {
   body.append(text);
 }
 
-setInterval(() => {
+for (let index = 0; index < 50; index++) {
   createText();
-}, 1500);
+}
 
 // Bouton : Menu Ouvrir/Fermer Navbar
 menu.addEventListener("click", () => {
@@ -187,12 +186,9 @@ let projectNumber = (arr1, arr2) => {
         // l'index de arr2 (j), soient toutes comparées
         if (j == i) {
           // Et si index[j]  est égal à index[i], alors. Fais les instructions suivantes..
-
           arr2[j].style.display = "flex";
           arr1[j].append(spanTest);
           arr1[j].style.color = "white";
-
-          // arrowBtnNav(arr1, arr2);
 
           setTimeout(() => {
             arr2[j].classList.add("project-nb-anim");
