@@ -144,12 +144,35 @@ nav ul li .active {
   }
 }
 
-/* transform: rotate3d(1.1, 1.1, 1, 0.2turn); */
-
 /* Top Page */
-section {
+#container {
   width: 100%;
-  background: linear-gradient(150deg, #231c2488 51%, #d4a04db7 51%);
+  animation: colorChange infinite linear 10s;
+  background-color: #746d6d44;
+}
+
+@keyframes colorChange {
+  0% {background: radial-gradient(circle, rgba(150, 150, 150, 0.377) 0%, rgba(255, 255, 255, 0.397) 100%);}
+  50% {background: radial-gradient(circle, rgba(150, 150, 150, 0.342) 35%, rgba(255, 255, 255, 0.349) 100%);}
+  75% {background: radial-gradient(circle, rgba(150, 150, 150, 0.363) 57%, rgba(255, 255, 255, 0.349) 100%);}
+  100% {background: radial-gradient(circle, rgba(150, 150, 150, 0.37) 84%, rgba(255, 255, 255, 0.404) 100%);}
+}
+
+.textAnim {
+  position: absolute;
+  top: 100%;
+  z-index: -1;
+  color: #0b2b0b;
+  animation: moveUp 5s infinite;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(-950px);
+  }
 }
 
 header {
@@ -787,3 +810,7 @@ footer div a {
 footer a:hover {
   scale: 1.1;
 }
+
+/* ///////////// */
+
+

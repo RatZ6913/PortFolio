@@ -15,7 +15,7 @@ menu.addEventListener("click", () => {
   }
 });
 
-// Tableau String pour les balises <span>
+// Tableau Texte pour les balises <span>
 let arrTypeWriter = [
   "La Programmation Web",
   "Le Front & le Back",
@@ -74,6 +74,7 @@ spanWords.forEach((element, index) => {
     }
   }, 300);
 });
+
 
 // A OPTIMISER PLUS TARD // // // // // // // // // // // // // // // // // /
 let about = document.querySelector("#about"); //
@@ -391,3 +392,34 @@ contentHobby.forEach((element, index) => {
     }, 1000);
   });
 });
+
+
+
+
+
+
+let body = document.querySelector('body');
+let arrText = [
+  "0",
+  "1"
+];
+
+createText = () => {
+  random = Math.floor(Math.random() * 3);
+  arrText.textContent = arrText[random];
+
+  let text = document.createElement('div');
+  text.classList.add('textAnim');
+
+  text.textContent = arrText[random];
+
+  text.style.left = Math.random() * 100 + "%";
+  text.style.animationDuration = Math.random() * 1 + 2 + "s";
+  body.append(text);
+}
+
+setInterval(() => {
+  createText();
+}, 500);
+
+
