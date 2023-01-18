@@ -2,6 +2,31 @@ let nav = document.querySelector("nav");
 let menu = document.querySelector("#menu");
 let spanWords = document.querySelectorAll(".span-second-text");
 
+// TEXT ANIMATION BACKGROUND 
+let body = document.querySelector('body');
+let arrText = [
+  "0",
+  "1"
+];
+
+createText = () => {
+  random = Math.floor(Math.random() * 3);
+  arrText.textContent = arrText[random];
+
+  let text = document.createElement('div');
+  text.classList.add('textAnim');
+
+  text.textContent = arrText[random];
+
+  text.style.left = Math.random() * 100 + "%";
+  text.style.animationDuration = Math.random() * 1 + 2 + "s";
+  body.append(text);
+}
+
+setInterval(() => {
+  createText();
+}, 500);
+
 // Bouton : Menu Ouvrir/Fermer Navbar
 menu.addEventListener("click", () => {
   nav.classList.toggle("btn-menu");
@@ -396,30 +421,5 @@ contentHobby.forEach((element, index) => {
 
 
 
-
-
-let body = document.querySelector('body');
-let arrText = [
-  "0",
-  "1"
-];
-
-createText = () => {
-  random = Math.floor(Math.random() * 3);
-  arrText.textContent = arrText[random];
-
-  let text = document.createElement('div');
-  text.classList.add('textAnim');
-
-  text.textContent = arrText[random];
-
-  text.style.left = Math.random() * 100 + "%";
-  text.style.animationDuration = Math.random() * 1 + 2 + "s";
-  body.append(text);
-}
-
-setInterval(() => {
-  createText();
-}, 500);
 
 

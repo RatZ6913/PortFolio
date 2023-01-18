@@ -279,6 +279,7 @@ h2 {
   background-image: url(../img/bg-img1.jpg);
   background-size: cover;
   background-position: center;
+  box-shadow: 10px 20px 20px black;
 }
 
 #left-content {
@@ -351,6 +352,7 @@ h2 {
   background-image: url(../img/bg-image5.jpg);
   background-size: cover;
   background-position: center;
+  box-shadow: 10px 20px 20px black;
 }
 
 #box-project {
@@ -611,6 +613,7 @@ h2 {
   background-image: url(../img/bg-img2.jpg);
   background-size: cover;
   background-position: center;
+  box-shadow: 10px 20px 20px black;
 }
 
 #hobby h2 {
