@@ -1,0 +1,59 @@
+nav {
+  width: 20%;
+}
+
+#container img {
+  display: none;
+}
+
+/* PARTIE : A PROPOS */
+#left-content {
+  width: 80%;
+}
+
+#right-content {
+  width: 20%;
+}
+
+/* PARTIE : PROJETS  */
+.content-project {
+  width: 100%;
+}
+
+.img-project {
+  min-height: 20vh;
+}
+
+.btn-arrow {
+  width: 50px;
+}
+
+/* PARTIE : HOBBY  */
+#hobby {
+  opacity: 100%;
+}
+
+#box-hobby {
+  width: 80%;
+}
+
+#box-hobby div {
+  height: 7vh;
+  width: 100%;
+}
+
+#box-hobby div:hover {
+  width: 100%;
+}
+
+.boxInCatHobby {
+  width: 100%;
+  overflow: scroll;
+  height: 30vh;
+  z-index: 2;
+  margin: 0;
+}
+
+.titleInCatHobby {
+  margin: 0;
+}

@@ -342,6 +342,10 @@ h2 {
   100% { transform: scale(1.3);}
 }
 
+#right-content h2 {
+  text-align: center;
+}
+
 /*_____________ 2 ÈME BOÎTE : MENU : PROJETS ________________________*/
 /* A MODIFIER  */
 #project {
