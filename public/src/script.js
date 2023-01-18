@@ -10,7 +10,7 @@ let arrText = [
 ];
 
 createText = () => {
-  random = Math.floor(Math.random() * 3);
+  random = Math.floor(Math.random() * 2);
   arrText.textContent = arrText[random];
 
   let text = document.createElement('div');
@@ -25,7 +25,7 @@ createText = () => {
 
 setInterval(() => {
   createText();
-}, 500);
+}, 1000);
 
 // Bouton : Menu Ouvrir/Fermer Navbar
 menu.addEventListener("click", () => {
@@ -55,13 +55,6 @@ let arrTypeWriter2 = [
   "De mon Expérience",
 ];
 
-let iconWeb = [
-  "./public/img/dev-web.png",
-  "./public/img/fullstack.png",
-  "./public/img/skills.png",
-  "./public/img/experience.png",
-];
-
 // Text Writer : Pour les mots importants dans la partie Accueil
 spanWords.forEach((element, index) => {
   let textWriter = arrTypeWriter[index];
@@ -85,9 +78,7 @@ spanWords.forEach((element, index) => {
         setInterval(() => {
           element.textContent += textWriter2[i];
           if (i === textWriter2.length) {
-            element.innerHTML =
-              arrTypeWriter2[index] +
-              `<img src="${iconWeb[index]}" class="logo-languages">`;
+            element.innerHTML = arrTypeWriter2[index];
             clearInterval(setInterval(interval));
           } else {
             i++;
@@ -226,6 +217,7 @@ let projectNumber = (arr1, arr2) => {
     });
   }
 };
+
 projectNumber(arrLinkNumber, arrProjectNumber);
 
 let arrowBtnNav = (arr1, arr2) => {
