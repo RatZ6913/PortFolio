@@ -339,6 +339,8 @@ contentHobby.forEach((element, index) => {
   boxInCatHobby.classList.add('boxInCatHobby');
   boxInCatHobby.dataset.number = index;
 
+  let audio = new Audio('../public/sound/sound.mp3');
+
   let titleInCatHobby = document.createElement('h4');
   titleInCatHobby.classList.add('titleInCatHobby');
   titleInCatHobby.textContent = arrTextHobby[index];
@@ -385,6 +387,8 @@ contentHobby.forEach((element, index) => {
 
   let n = 0;
   titleInCatHobby.addEventListener('click', () => {
+    audio.play();
+
     timeoutId = setTimeout(() => {
       intervalId = setInterval(() => {
         let random = Math.floor(Math.random() * 3);
@@ -395,6 +399,8 @@ contentHobby.forEach((element, index) => {
           loadCircle.style.borderColor = "white";
           loadCircle.style.backgroundColor = "#FFA500";
           titleInCatHobby.style.cursor = "auto";
+          audio.pause();
+
         } else {
           avatarTalking.style.backgroundImage = arrAvatarLoad[random];
           loadCircle.style.display = "block";
@@ -405,9 +411,4 @@ contentHobby.forEach((element, index) => {
     }, 1000);
   });
 });
-
-
-
-
-
 
